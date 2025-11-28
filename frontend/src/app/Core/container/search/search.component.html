@@ -1,0 +1,21 @@
+<div class="shopWeb--search--product">
+  <input
+    class="shopWeb--search--product--input"
+    type="text"
+    placeholder="Search products..."
+    [(ngModel)]="searchText"
+    (input)="onInputChange()"
+  />
+
+  <button
+    class="btn btn-search"
+    [disabled]="searchText.trim() === ''"
+    (click)="onInputChange()"
+  >
+    Search
+  </button>
+</div>
+
+<div class="shopWeb--search--result--for" *ngIf="searchText.trim() !== ''">
+  <p><strong>Search result for:</strong> {{ searchText }}</p>
+</div>

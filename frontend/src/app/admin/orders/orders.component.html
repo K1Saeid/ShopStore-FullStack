@@ -1,0 +1,84 @@
+<div class="orders-container">
+
+  <div class="page-header">
+    <h2>Orders</h2>
+    <input type="text" placeholder="Search orders..." [(ngModel)]="searchText">
+  </div>
+
+  <div  class="orders-table-wrapper">
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Order Number</th>
+          <th>User</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let o of pagedOrders">
+          <td>{{ o.id }}</td>
+          <td>{{ o.orderNumber }}</td>
+        <td class="user"  [routerLink]="['/admin/customers', o.user.id]">{{ o.user?.fullName }}</td>
+
+
+
+          <td>{{ o.createdAt | date:'medium' }}</td>
+          <td>€{{ o.totalPrice }}</td>
+
+          <td>
+            <span class="status" 
+              [class.pending]="o.status === 'Pending'"
+              [class.paid]="o.status === 'Paid'"
+              [class.cancelled]="o.status === 'Cancelled'">
+              {{ o.status }}
+            </span>
+          </td>
+
+          <td>
+            <button class="btn-view" [routerLink]="['/admin/orders', o.id]">
+              View
+            </button>
+
+            <button class="btn-edit" (click)="openStatusModal(o)">
+              Update
+            </button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+  <app-pagination
+    [totalItems]="filteredOrders.length"
+    [pageSize]="pageSize"
+    [(currentPage)]="page">
+  </app-pagination>
+</div>
+
+
+<!-- UPDATE STATUS MODAL -->
+<div class="modal-backdrop" *ngIf="modalOpen" (click)="closeStatusModal()"></div>
+
+<div class="modal" *ngIf="modalOpen">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+
+    <h3>Update Order Status</h3>
+
+    <select [(ngModel)]="selectedStatus" class="form-select">
+      <option value="Pending">Pending</option>
+      <option value="Paid">Paid</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <div class="modal-actions">
+      <button class="btn-save" (click)="saveStatus()">Save</button>
+      <button class="btn-cancel" (click)="closeStatusModal()">Cancel</button>
+    </div>
+
+  </div>
+</div>

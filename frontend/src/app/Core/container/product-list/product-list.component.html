@@ -1,0 +1,15 @@
+<app-search (searchTextChanged)="onSearchChanged($event)"></app-search>
+
+<app-filter [all]="totalProducts"
+            [inStock]="totalProductInstock"
+            [outOfStock]="totalProductOutofstock"
+            (selectedFilterRadioChange)="onFilterChanged($event)">
+</app-filter>
+
+<div class="shopweb--products--container">
+  <div *ngFor="let prod of products" (click)="selectedProduct = prod " (click)="openDetails(prod)">
+    <app-product *ngIf="shouldShowProduct(prod)"
+                 [product]="prod">
+    </app-product>
+  </div>
+</div>

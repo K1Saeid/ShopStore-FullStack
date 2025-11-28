@@ -1,0 +1,2597 @@
+{
+  "Version": 1,
+  "Hash": "+Ls0Dlv51AqLsnEyWs0NzaiEzCEIzyBAzAlLdwa6NHw=",
+  "Source": "ShopStore",
+  "BasePath": "_content/ShopStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ShopStore\\wwwroot",
+      "Source": "ShopStore",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s0ic7mbyg",
+      "Integrity": "jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s0ic7mbyg",
+      "Integrity": "jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\17d1b889-8134-434a-b8e2-601b65aeaebe.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/17d1b889-8134-434a-b8e2-601b65aeaebe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4prevjkwr2",
+      "Integrity": "SJEIsA8GaTnBGSdYr2c4LlJl2Xa061q5ctbv/nGTpeI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\17d1b889-8134-434a-b8e2-601b65aeaebe.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/2ab5be35-14a0-4285-882a-f564d9d2f458_saffron#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s0ic7mbyg",
+      "Integrity": "jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7urad2t0am",
+      "Integrity": "b/Bw++DlTMQ4k3q23hRTK8JT7/A6gbYr+54XBHPlckg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s0ic7mbyg",
+      "Integrity": "jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7d892bc8-ebca-4aec-8632-0227866018ac.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/7d892bc8-ebca-4aec-8632-0227866018ac#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fqbi3tfvys",
+      "Integrity": "Gc0TTYtBiOG+/T0687ZPZgCfWCsHd9V/qK7OELBBIkA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7d892bc8-ebca-4aec-8632-0227866018ac.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b2e0e40e-4927-46cb-9686-702797c68cf1.jpg",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/b2e0e40e-4927-46cb-9686-702797c68cf1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ookjwxahvl",
+      "Integrity": "eBPNmM684cQYI28QgiZoiznnAOz+MTPIpXIc5St7jlE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b2e0e40e-4927-46cb-9686-702797c68cf1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif"
+    },
+    {
+      "Identity": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif",
+      "SourceId": "ShopStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\",
+      "BasePath": "_content/ShopStore",
+      "RelativePath": "images/fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0uqkb2skk4",
+      "Integrity": "2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:58:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\02bf0455-9106-4356-904e-188c27696b4c_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:58:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.1s0ic7mbyg.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s0ic7mbyg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0589bf6f-b6ed-4be0-a036-cfb5a92fe452_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.1s0ic7mbyg.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s0ic7mbyg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\0e20eafb-012b-4fe0-8fb6-52653dfa3c93_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/17d1b889-8134-434a-b8e2-601b65aeaebe.4prevjkwr2.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\17d1b889-8134-434a-b8e2-601b65aeaebe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SJEIsA8GaTnBGSdYr2c4LlJl2Xa061q5ctbv/nGTpeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:41:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4prevjkwr2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/17d1b889-8134-434a-b8e2-601b65aeaebe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SJEIsA8GaTnBGSdYr2c4LlJl2Xa061q5ctbv/nGTpeI="
+        }
+      ]
+    },
+    {
+      "Route": "images/17d1b889-8134-434a-b8e2-601b65aeaebe.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\17d1b889-8134-434a-b8e2-601b65aeaebe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SJEIsA8GaTnBGSdYr2c4LlJl2Xa061q5ctbv/nGTpeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:41:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SJEIsA8GaTnBGSdYr2c4LlJl2Xa061q5ctbv/nGTpeI="
+        }
+      ]
+    },
+    {
+      "Route": "images/1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\1fc2faf4-3898-4eff-b43b-2020d78f6234_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.1s0ic7mbyg.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:50:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s0ic7mbyg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\2ab5be35-14a0-4285-882a-f564d9d2f458_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:50:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:08:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\36df5ce8-869c-4611-891e-9c8c9f030608_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:08:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:11:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\3c1fd5ad-09b9-4cdf-8c9e-4a37f6b8cead_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:11:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.7urad2t0am.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b/Bw++DlTMQ4k3q23hRTK8JT7/A6gbYr+54XBHPlckg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7urad2t0am"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b/Bw++DlTMQ4k3q23hRTK8JT7/A6gbYr+54XBHPlckg="
+        }
+      ]
+    },
+    {
+      "Route": "images/5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5303a160-b0bb-44de-b81a-dfa38f50b544_Iphone.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b/Bw++DlTMQ4k3q23hRTK8JT7/A6gbYr+54XBHPlckg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b/Bw++DlTMQ4k3q23hRTK8JT7/A6gbYr+54XBHPlckg="
+        }
+      ]
+    },
+    {
+      "Route": "images/562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\562062ed-d4dd-4baa-8268-86cf0616dcc9_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.1s0ic7mbyg.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:16:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s0ic7mbyg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5ed31ab2-a40a-423c-9ddd-adefa6774434_saffron.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:16:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwPLl8ojWReijuSldJuQ1RMXzW2IsVMZKsZI5tnbDYM="
+        }
+      ]
+    },
+    {
+      "Route": "images/5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:35:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\5fd2bca6-9e76-441c-b165-52b3b884aaaf_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:35:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\608b3ce8-babb-4083-9afb-5f9f1ae2231a_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:58:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7be952e0-4718-4e16-971d-b1316f6ee324_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:58:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/7d892bc8-ebca-4aec-8632-0227866018ac.fqbi3tfvys.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7d892bc8-ebca-4aec-8632-0227866018ac.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gc0TTYtBiOG+/T0687ZPZgCfWCsHd9V/qK7OELBBIkA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:45:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fqbi3tfvys"
+        },
+        {
+          "Name": "label",
+          "Value": "images/7d892bc8-ebca-4aec-8632-0227866018ac.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gc0TTYtBiOG+/T0687ZPZgCfWCsHd9V/qK7OELBBIkA="
+        }
+      ]
+    },
+    {
+      "Route": "images/7d892bc8-ebca-4aec-8632-0227866018ac.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\7d892bc8-ebca-4aec-8632-0227866018ac.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gc0TTYtBiOG+/T0687ZPZgCfWCsHd9V/qK7OELBBIkA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:45:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gc0TTYtBiOG+/T0687ZPZgCfWCsHd9V/qK7OELBBIkA="
+        }
+      ]
+    },
+    {
+      "Route": "images/813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:10:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\813fd3ae-1a93-44d9-bca6-67b54ab61229_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:10:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\83fc3dad-17ea-47a5-87b5-d9b42eaadedd_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:08:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\9bd32e92-6d17-494c-adba-e9626f82f639_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:08:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:01:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ab2dbacf-e2ed-45b0-83ce-9c503151837a_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:01:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/b2e0e40e-4927-46cb-9686-702797c68cf1.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b2e0e40e-4927-46cb-9686-702797c68cf1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "249103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eBPNmM684cQYI28QgiZoiznnAOz+MTPIpXIc5St7jlE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:22:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eBPNmM684cQYI28QgiZoiznnAOz+MTPIpXIc5St7jlE="
+        }
+      ]
+    },
+    {
+      "Route": "images/b2e0e40e-4927-46cb-9686-702797c68cf1.ookjwxahvl.jpg",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b2e0e40e-4927-46cb-9686-702797c68cf1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "249103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eBPNmM684cQYI28QgiZoiznnAOz+MTPIpXIc5St7jlE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:22:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ookjwxahvl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/b2e0e40e-4927-46cb-9686-702797c68cf1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eBPNmM684cQYI28QgiZoiznnAOz+MTPIpXIc5St7jlE="
+        }
+      ]
+    },
+    {
+      "Route": "images/b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\b6d4ee49-a5b0-4f44-a050-6ceb2c8e4288_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 09:49:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:01:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\ca01b772-00e2-4a1e-8c57-f3db9c39c4dc_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 10:01:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:13:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\e8501a3e-3a90-425a-8405-3c536c181a95_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:13:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:07:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\f7941af9-7378-4e7e-816a-2beb281301d8_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:07:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.0uqkb2skk4.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:17:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0uqkb2skk4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif",
+      "AssetFile": "C:\\Users\\32465\\Desktop\\Bureaublad\\Full Stack development\\.Net\\Angular\\ShopStore\\ShopStore\\wwwroot\\images\\fb7e0ea7-d7c1-406d-8fac-2bc75622cde4_NIKE+METCON+8.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Nov 2025 11:17:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LfUozZA75AM/gg9JE6F/hgwBCn1821ZypZTrICnmXA="
+        }
+      ]
+    }
+  ]
+}

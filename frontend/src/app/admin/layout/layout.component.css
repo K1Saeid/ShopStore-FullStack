@@ -1,0 +1,13 @@
+.admin-wrapper {
+  display: flex;
+}
+
+.admin-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.admin-page {
+  margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;   
+    padding: 0 10px; 
+    color: #28282B;
+}
+input, button {
+  font: inherit;
+  line-height: normal;
+}
+input,
+button {
+  vertical-align: middle;
+}
+.slick-prev:before,
+.slick-next:before {
+ 
+  color:black !important;
+  
+}

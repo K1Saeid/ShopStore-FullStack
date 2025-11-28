@@ -1,0 +1,38 @@
+<div class="checkout-wrapper">
+  
+  <h2>Checkout</h2>
+
+  <div class="checkout-box">
+
+    <h3>Shipping Information</h3>
+
+    <input type="text" placeholder="Full Name" [(ngModel)]="orderData.fullName">
+    <input type="text" placeholder="Address" [(ngModel)]="orderData.address">
+    <input type="text" placeholder="City" [(ngModel)]="orderData.city">
+    <input type="text" placeholder="Postal Code" [(ngModel)]="orderData.postalCode">
+
+  </div>
+
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+
+    <div *ngFor="let item of cart.items" class="summary-item">
+      <img [src]="item.product.imageUrl">
+      <div>
+        <p>{{ item.product.name }}</p>
+        <small>Qty: {{ item.quantity }}</small>
+      </div>
+      <b>€{{ item.price * item.quantity }}</b>
+    </div>
+
+    <hr>
+
+    <div class="summary-total">
+      <span>Total:</span>
+      <b>€{{ cart.totalPrice }}</b>
+    </div>
+  </div>
+
+  <button class="btn-place-order" (click)="placeOrder()">Place Order</button>
+
+</div>

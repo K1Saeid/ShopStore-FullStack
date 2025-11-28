@@ -1,0 +1,72 @@
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 12px 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background: #374151;
+}
+.sidebar-menu li {
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s;
+}
+
+/* حالت hover */
+.sidebar-menu li:hover {
+  background: #374151;
+}
+
+/* حالت active واقعی */
+.sidebar-menu li.active {
+  background: #374151;
+}
+
+/*** فلش ***/
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid white;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  opacity: 0;
+  transform: rotate(-90deg);
+  transition: 0.25s ease;
+}
+
+/* فلش روی active/hover */
+.sidebar-menu li:hover .arrow,
+.sidebar-menu li.active .arrow {
+  opacity: 1;
+  transform: rotate(0deg);
+}

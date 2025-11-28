@@ -1,0 +1,9 @@
+.auth-bg {
+  min-height: 72vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f0f2f5;
+  padding-top: 70px;
+}

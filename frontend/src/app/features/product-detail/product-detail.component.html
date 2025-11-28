@@ -1,0 +1,99 @@
+<div class="overlay" (click)="closeDetail()"></div>
+<div class="shopweb--product--details--info scroll" >
+        <div class="shopweb-product-detail-close" (click)="closeDetail()" >
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="shopweb-product-detail-image">
+            <img [src]="product.imageUrl" class="shopweb-product-detail-image">
+        </div>
+        
+        <div class="shopweb-product-detail">
+            <div class="shopweb-product-detail-name">
+                <h2>{{product.name}}</h2>
+            </div>
+            <div class="shopweb-product-detail-gbc">
+                <span>{{product.gender}}</span>
+                <span>{{product.brand}}</span>
+                <span>{{product.category}}</span>
+            </div>
+            <div class="shopweb-product-detail-price">
+                <p>
+                    <b>Price Each Pair:</b>
+                    <span style="background-color: red; color:white"><s>{{product.price}}</s></span>
+                    <span style="background-color: green; color:white">{{product.discountPrice}}</span> (Inclusive of all taxes)
+                </p>
+            </div>
+          <div class="shopweb-product-detail-size" *ngIf="sizes.length">
+            <div style="padding: 5px 0px; border-bottom: #ccc 2px solid;margin-top: 10px;">
+                <h4>Available Sizes</h4>
+            </div>
+
+            <div style="margin-top: 20px;; margin-bottom: 15px;">
+                <span
+                    *ngFor="let size of sizes"
+                    class="shopweb-product-detail-available-size"
+                    [class.active]="selectedSize === size"
+                    (click)="selectSize(size)"
+                >
+                    {{ size }}
+                </span>
+            </div>
+            </div>
+
+
+           <div class="shopweb-product-detail-color" *ngIf="colors.length">
+                <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                    <h4>Available Colors</h4>
+                </div>
+
+                <div style="margin-top: 20px;; margin-bottom: 15px;">
+                   <span
+                    *ngFor="let color of colors"
+                    class="color-circle"
+                    [style.background-color]="color"
+                    [class.active]="selectedColor === color"
+                    (click)="selectColor(color)"
+                    >
+                </span>
+
+                </div>
+                </div>
+
+
+            </div>
+
+            <div class="shopweb-product-detail-desc">
+                <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                    <h4>Description</h4>
+                </div>
+                <div style="margin-top: 20px; margin-bottom: 15px;">
+                    <div [innerHTML]="product.description"></div>
+
+                </div>                
+            </div>
+            <div class="qty-box">
+        <button (click)="decreaseQty()">-</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increaseQty()">+</button>
+        </div>
+
+        <div class="shopweb-product-detail-addtoCart">
+            <button class="btn-add-to-cart"
+                    *ngIf="product.inStock"
+                    (click)="addToCart()">
+            ADD TO CART
+            </button>
+
+            <button class="btn-add-to-cart" *ngIf="!product.inStock">Notify Me</button>
+        </div>
+
+        </div>
+        
+    
+<div 
+  #cartAlert
+  class="alert alert-dark fade" 
+  role="alert" 
+  style="position: fixed; top: 20px; right: 20px; z-index: 9999; display:none;">
+  Product added to cart!
+</div>

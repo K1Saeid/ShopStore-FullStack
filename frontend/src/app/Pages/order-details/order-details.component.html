@@ -1,0 +1,50 @@
+<div class="order-details-container">
+
+
+  <!-- Title -->
+  <h2 class="page-title">Order <span>#{{ order.orderNumber }}</span></h2>
+  <p class="order-date">{{ order.createdAt | date : 'medium' }}</p>
+
+  <!-- Order Summary Card -->
+  <div class="card summary-card">
+
+    <h3>Order Summary</h3>
+
+    <div class="summary-row">
+      <span>Status:</span>
+      <span class="status">{{ order.status }}</span>
+    </div>
+
+    <div class="summary-row total">
+      <span>Total:</span>
+      <span class="price">€{{ order.totalPrice }}</span>
+    </div>
+
+  </div>
+
+  <!-- Items Title -->
+  <h3 class="items-title">Items</h3>
+
+  <!-- Items List -->
+  <div class="card items-card">
+    <div class="item" *ngFor="let item of order.items">
+
+      <div class="item-left">
+        <img [src]="item.imageUrl" class="item-img" />
+        <div class="item-info">
+          <h4>{{ item.productName }}</h4>
+          <p>Size: {{ item.size }} — Color: {{ item.color }}</p>
+          <p>Qty: {{ item.quantity }}</p>
+        </div>
+      </div>
+
+      <div class="item-price">
+        €{{ item.price }}
+      </div>
+
+    </div>
+  </div>
+<button class="btn btn-dark mb-3" (click)="goBack()">
+  ← Back naar bestellingen
+</button>
+</div>

@@ -1,0 +1,173 @@
+.shopweb--header{
+    width: 100%;
+    height: 11vh;
+    display:flex;
+    flex-wrap: wrap;
+    border-bottom: #E5E4E2 1.5px solid;
+}
+
+.shopweb-logo{
+    padding: 1.2vh 8vh;
+    font-size: 40px;
+    font-weight: bold;
+    color: #36454F;
+    font-family: 'Concert One', cursive;
+    width:20%;
+}
+.shopweb--header--nav{
+    width: 80%;
+    padding: 1vh 2vh;
+    font-size: 10px;
+}
+.shopweb--bottom--bar{
+    display: flex;
+}
+.shopweb--search-bar{
+    padding: 0 3vh;
+}
+.shopweb-search-box{
+    width: 170px;
+    height: 33px;
+    border: none;
+    background-color: #efefef;
+    padding: 2px 10px;
+}
+
+.shopweb--search--btn{
+    width: 33px;
+    height: 33px;
+    border: none;
+    background-color: #efefef;
+    margin-left: -5px;
+}
+
+.btn{
+    padding: 10px 15px;
+    border: none;
+    margin: 0px 0px;
+}
+
+.btn-primary{
+    background-color: #28282B;
+    color: white;
+}
+
+/* CART ICON BOX */
+/* کانتینر لینک */
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+/* آیکون سبد */
+.cart-icon {
+  font-size: 23px;
+  transition: 0.3s ease;
+}
+
+/* --- افکت Glow + تغییر رنگ + Shake --- */
+.cart-link:hover .cart-icon {
+  color: #ff3b3b; /* تغییر رنگ کامل */
+  text-shadow: 0 0 8px rgba(255, 60, 60, 0.9); /* Glow دور آیکون */
+  transform: scale(1.15) rotate(-3deg); /* کمی بزرگ + کمی زاویه دادن */
+}
+
+/* Badge هم حرفه‌ای‌تر می‌شود */
+.cart-badge {
+  background: #e60023;
+  transition: 0.3s ease;
+}
+
+.cart-link:hover .cart-badge {
+  background: #ff4d4d;
+  transform: scale(1.15);
+  box-shadow: 0 0 6px rgba(255, 60, 60, 0.9);
+}
+
+
+.cart-icon {
+  font-size: 22px;
+}
+
+/* BADGE */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #dc3545;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.cart-link:hover .cart-badge {
+  transform: scale(1.1);
+  transition: 0.25s ease;
+ 
+}
+
+.navbar-right {
+  font-size: 15px;
+}
+
+.logout-btn {
+  margin-left: 10px;
+  border: none;
+  background: none;
+  color: #007bff;
+  cursor: pointer;
+}
+.navbar-right { display:flex; gap:8px; align-items:center; }
+.user-menu { position: relative; display:inline-block; }
+.user-btn { border:1px solid #e5e7eb; background:#fff; padding:6px 10px; border-radius:8px; cursor:pointer; }
+.dropdown { 
+  position:absolute; top:110%; right:0; min-width:180px; 
+  background:#fff; border:1px solid #e5e7eb; border-radius:10px; 
+  box-shadow:0 10px 25px rgba(0,0,0,.08); padding:6px 0; 
+  list-style:none; margin:0; display:none; z-index:1000;
+}
+.dropdown.open { display:block; }
+.dropdown li { padding:0; }
+.dropdown a, .dropdown button { 
+  width:100%; text-align:left; background:transparent; border:0; 
+  padding:10px 14px; cursor:pointer; display:block; color:#111827; text-decoration:none;
+}
+.dropdown a:hover, .dropdown button:hover { background:#f3f4f6; }
+.dropdown .divider { height:1px; background:#efefef; margin:6px 0; }
+.logout { color:#dc2626; }
+
+
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+}
+.dropdown .dropdown-menu{
+  right:17px !important;
+}
+
+.dropdown.open {
+  display: block;
+}
+

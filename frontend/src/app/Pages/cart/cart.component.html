@@ -1,0 +1,49 @@
+<div class="cart-container" *ngIf="cart.items.length > 0; else emptyCart">
+
+  <h2 class="cart-title">Shopping Cart</h2>
+
+  <div *ngFor="let item of cart.items" class="cart-item-card">
+
+    <div class="cart-img-box">
+      <img [src]="item.product.imageUrl" alt="">
+    </div>
+
+    <div class="cart-info">
+
+      <h4 class="product-name">{{ item.product.name }}</h4>
+      <p class="product-variant">
+        Color: <span>{{ item.color }}</span> |
+        Size: <span>{{ item.size }}</span>
+      </p>
+      <p class="product-price">€{{ item.price }}</p>
+
+      <!-- Quantity -->
+      <div class="qty-box">
+        <button class="qty-btn" (click)="decrease(item)">−</button>
+        <span class="qty-number">{{ item.quantity }}</span>
+        <button class="qty-btn" (click)="increase(item)">+</button>
+      </div>
+
+      <button class="remove-btn" (click)="remove(item.id)">
+        <i class="bi bi-trash"></i> Remove
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="cart-total-box">
+    <span>Total:</span>
+    <strong>€{{ cart.totalPrice }}</strong>
+  </div>
+
+  <button class="checkout-btn btn-dark" routerLink="/checkout">
+    Proceed to Checkout
+  </button>
+</div>
+
+<ng-template #emptyCart>
+  <h3 class="empty-text">Your cart is empty </h3>
+  <p></p>
+ 
+</ng-template>

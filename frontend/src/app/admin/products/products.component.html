@@ -1,0 +1,88 @@
+<h2 class="page-title">Products</h2>
+
+<div *ngIf="loading">Loading products...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="!loading">
+
+  <div class="actions">
+    <button class="btn-add" routerLink="/admin/products/add">+ Add Product</button>
+    <input type="text" placeholder="Search..." class="search-input">
+  </div>
+
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+     <tr *ngFor="let p of paginatedProducts; let i = index">
+
+        <td>{{ (page - 1) * pageSize + i + 1 }}</td>
+
+       <img [src]="p.imageUrl" class="img-sm" alt="">
+
+
+        <td>{{ p.name }}</td>
+        <td>${{ p.price }}</td>
+
+       <td>{{ p.itemsLeft }}</td>
+
+
+        <td>
+            <span class="status" 
+                    [class.active]="p.itemsLeft > 0"
+                    [class.inactive]="p.itemsLeft === 0">
+                {{ p.itemsLeft > 0 ? 'In Stock' : 'Out of Stock' }}
+            </span>
+        </td>
+
+
+        <td>
+          <button class="btn-edit" [routerLink]="['/admin/products/edit', p.id]">Edit</button>
+
+          <button class="btn-delete" (click)="openDeleteModal(p)">Delete</button>
+        </td>
+        
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+<!-- DELETE CONFIRM MODAL -->
+<div class="modal" tabindex="-1" [class.show]="showDeleteModal" [ngStyle]="{'display': showDeleteModal ? 'block' : 'none'}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Delete Product</h5>
+        <button type="button" class="btn-close" (click)="closeDeleteModal()"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong>{{ selectedProduct?.name }}</strong>?</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeDeleteModal()">Cancel</button>
+        <button class="btn btn-danger" (click)="confirmDelete()">Delete</button>
+      </div>
+
+    </div>
+
+  </div>
+  
+</div>
+<app-pagination
+  [totalItems]="products.length"
+  [pageSize]="pageSize"
+  [(currentPage)]="page">
+</app-pagination>

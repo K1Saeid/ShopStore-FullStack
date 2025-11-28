@@ -1,0 +1,62 @@
+<h2 class="page-title">Order #{{ order.orderNumber }}</h2>
+
+<div class="order-wrapper">
+
+  <div class="summary-card">
+    <div class="summary-grid">
+      <span class="label">Order Date:</span>
+      <span class="value">{{ order.createdAt | date:'medium' }}</span>
+    </div>
+
+    <div class="summary-grid">
+      <span class="label">Customer:</span>
+      <span class="value">{{ order.user.fullName}}
+</span>
+    </div>
+
+    <div class="summary-grid">
+      <span class="label">Status:</span>
+      <span>
+        <span class="status-badge" 
+              [ngClass]="{
+                'status-pending': order.status==='Pending',
+                'status-paid': order.status==='Paid',
+                'status-cancelled': order.status==='Cancelled'
+              }">
+          {{ order.status }}
+        </span>
+      </span>
+    </div>
+
+    <div class="summary-grid">
+      <span class="label">Total Amount:</span>
+      <span class="value">€{{ order.totalPrice }}</span>
+    </div>
+  </div>
+
+  <!-- ITEMS -->
+  <div class="items-card">
+    <h3 class="item-title">Items</h3>
+
+    <div *ngFor="let item of order.items" class="item-row">
+
+      <img [src]="item.imageUrl" class="item-image" />
+
+      <div class="item-info">
+        <p class="item-name">{{ item.productName }}</p>
+        <p class="item-meta">
+          Size: {{ item.size }} — Color: {{ item.color }} — Qty: {{ item.quantity }}
+        </p>
+      </div>
+
+      <div class="item-price">
+        €{{ item.price }}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<button class="btn-back" (click)="goBack()">← Back</button>
+

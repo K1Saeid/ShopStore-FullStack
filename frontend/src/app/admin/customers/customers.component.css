@@ -1,0 +1,14 @@
+input[type="text"]{
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.customer-link{
+  color: rgb(0, 110, 255);
+  
+}
+.customer-link:hover{
+  text-decoration: underline;
+ 
+}

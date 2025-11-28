@@ -1,0 +1,113 @@
+
+<h2 class="page-title">Add New Product</h2>
+<div *ngIf="successMessage" class="alert alert-success" role="alert">
+  {{ successMessage }}
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+  {{ errorMessage }}
+</div>
+
+<form (ngSubmit)="submit()">
+
+  <div class="form-grid">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="product.name" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Brand</label>
+      <input type="text" [(ngModel)]="product.brand" name="brand" required />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+
+       <select [(ngModel)]="product.categoryId" name="categoryId" required>
+        <option [ngValue]="null">-- Select Category --</option>
+        <option *ngFor="let c of categories" [ngValue]="c.id">
+            {{ c.name }}
+        </option>
+      </select>
+
+
+    </div>
+
+
+    <div class="form-group">
+      <label>Gender</label>
+      <select [(ngModel)]="product.gender" name="gender">
+        <option value="UNISEX">UNISEX</option>
+        <option value="MEN">MEN</option>
+        <option value="WOMEN">WOMEN</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Price ($)</label>
+      <input type="number" [(ngModel)]="product.price" name="price" required />
+    </div>
+
+    <div class="form-group">
+      <label>Discount Price ($)</label>
+      <input type="number" [(ngModel)]="product.discountPrice" name="discountPrice" />
+    </div>
+
+    <div class="form-group">
+      <label>Items Left</label>
+      <input type="number" [(ngModel)]="product.itemsLeft" name="itemsLeft" required />
+    </div>
+
+    <div class="form-group">
+      <label>In Stock</label>
+      <select [(ngModel)]="product.inStock" name="inStock">
+        <option [value]="true">Yes</option>
+        <option [value]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group full-width">
+      <label>Sizes (comma separated)</label>
+      <input type="text" [(ngModel)]="product.sizes" name="sizes" placeholder="6,7,8,9" />
+    </div>
+
+    <div class="form-group full-width">
+      <label>Colors (comma separated)</label>
+      <input type="text" [(ngModel)]="product.colors" name="colors" placeholder="White,Black" />
+    </div>
+
+    <div class="form-group full-width">
+      <label>Description</label>
+     <editor
+     apiKey="4qqexv2l5k4f1ewaj0bplmi9laf4mw63sqgsj7tpz51re5iq"
+        [(ngModel)]="product.description"
+        name="description"
+        [init]="{
+            height: 350,
+            menubar: true,
+            plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+            ],
+            toolbar:
+            'undo redo | blocks | bold italic underline forecolor | alignleft aligncenter alignright alignjustify | bullist numlist | link image | table | removeformat'
+        }"
+        ></editor>
+
+    </div>
+
+    <div class="form-group full-width">
+        <label>Product Image</label>
+        <input type="file" (change)="onFileSelected($event)" />
+
+        <img *ngIf="previewImage" [src]="previewImage" class="preview" />
+    </div>
+
+  </div>
+
+  <button [disabled]="loading" class="btn-submit">Add Product</button>
+
+</form>

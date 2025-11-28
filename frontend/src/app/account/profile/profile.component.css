@@ -1,0 +1,77 @@
+.account-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.account-tabs .nav-link {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 12px 20px;
+  font-weight: 600;
+  color: #555;
+}
+
+.account-tabs .nav-link.active {
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+
+.tab-body {
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.form-control {
+  padding: 12px;
+  border-radius: 8px;
+  background: #eef3ff;
+  margin-bottom: 8px;
+}
+
+.address-item,
+.order-item {
+  border-bottom: 1px solid #eee;
+  border-radius: 5px;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+.order-item.clickable {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.order-item.clickable:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+/* Status Colors */
+.status {
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+}
+.status.pending { background: #f0ad4e; }
+.status.paid { background: #28a745; }
+.status.cancelled { background: #dc3545; }

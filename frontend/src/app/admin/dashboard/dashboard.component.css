@@ -1,0 +1,122 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.container-section{
+  display: flex;
+   gap: 20px;
+}
+/* KPI GRID */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.kpi-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+}
+
+.kpi-card h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.kpi-card .value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+
+/* CHART BOX */
+.chart-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  min-height: 350px;
+ max-width: 50%;
+}
+#salesChart {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+
+/* SECTIONS */
+.section-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  flex: 1;
+}
+.section-box:nth-child(1){
+  max-width: 25%;
+}
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.styled-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.styled-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* STATUS COLORS */
+.status {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status.pending { background: #fff1c9; color: #c28b00; }
+.status.paid { background: #d4f8dd; color: #0f8a3a; }
+.status.cancelled { background: #ffd6d6; color: #c20000; }
+
+/* BUTTONS */
+.btn-view {
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #0069d9;
+}
+
+.warning {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.empty {
+  color: #888;
+  font-style: italic;
+}

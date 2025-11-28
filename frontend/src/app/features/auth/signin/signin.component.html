@@ -1,0 +1,46 @@
+<div class="auth-card">
+
+  <h3 class="title">Welkom terug </h3>
+
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input 
+        type="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="email"
+        required />
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input 
+        type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="password"
+        required />
+    </div>
+
+    <!-- Button -->
+    <button 
+      type="submit" 
+      class="btn btn-dark w-100"
+      [disabled]="!loginForm.valid">
+      Inloggen
+    </button>
+
+  </form>
+
+  <!-- Switch to Signup -->
+  <div class="text-center mt-3 small">
+    Heb je nog geen account?
+    <a routerLink="/auth/signup" class="link">Aanmelden</a>
+   
+  </div>
+
+</div>

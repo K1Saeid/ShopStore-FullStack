@@ -1,0 +1,39 @@
+.shopweb-menu{
+    padding-top: 2vh;
+    padding: 1vh 1vh;
+    color: #36454F;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:normal;
+    font-size: 14px;
+    width:100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Hover Underline Effect */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 15px;
+  vertical-align: sub;
+}
+.link-underline:first-child {
+    margin-left: 0;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;   /* فاصله خط از متن */
+  width: 0%;
+  height: 2px;    /* ضخامت خط */
+  background-color: currentColor; /* رنگ خط = رنگ متن */
+  transition: width 0.2s ease;
+  transform: translateX(-50%);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}

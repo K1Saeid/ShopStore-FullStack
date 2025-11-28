@@ -1,0 +1,56 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: #28a745;
+  color: #fff;
+  font-size: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.msg {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  border: none;
+  background: #222;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #000;
+}
+

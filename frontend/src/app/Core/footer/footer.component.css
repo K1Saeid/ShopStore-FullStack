@@ -1,0 +1,26 @@
+.footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e4e4e4;
+}
+
+.footer .brand {
+  font-weight: 700;
+  color: #282828;
+}
+
+.footer .link {
+  text-decoration: none;
+  color: #555;
+  
+}
+
+.footer .link:hover {
+  text-decoration: underline;
+  color: #000;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+hr {
+  opacity: 0.15;
+}

@@ -1,0 +1,136 @@
+<div class="account-container">
+
+  <h2 class="page-title">Mijn account</h2>
+
+  <!-- TABS -->
+ <ul class="nav nav-tabs account-tabs">
+  <li class="nav-item">
+    <a class="nav-link"
+       [class.active]="activeTab === 'profile'"
+       (click)="activeTab = 'profile'">
+      <i class="bi bi-person-circle me-2"></i>
+      Persoonlijke gegevens
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link"
+       [class.active]="activeTab === 'address'"
+       (click)="activeTab = 'address'">
+      <i class="bi bi-geo-alt me-2"></i>
+      Mijn adressen
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link"
+       [class.active]="activeTab === 'orders'"
+       (click)="activeTab = 'orders'">
+      <i class="bi bi-bag-check me-2"></i>
+      Mijn bestellingen
+    </a>
+  </li>
+</ul>
+
+
+
+  <!-- ============================= -->
+  <!-- TAB 1 — PROFILE INFORMATION  -->
+  <!-- ============================= -->
+  <div *ngIf="activeTab === 'profile'" class="tab-body card">
+
+    <h4>Persoonlijke gegevens</h4>
+
+    <label>Volledige naam</label>
+    <input class="form-control" [(ngModel)]="user.fullName">
+
+    <label>Email</label>
+    <input class="form-control" [value]="user.email" disabled>
+
+    <label>Telefoonnummer</label>
+    <input class="form-control" [(ngModel)]="user.phone">
+
+    <button class="btn btn-dark mt-3 w-100" (click)="saveProfile()">
+      Opslaan
+    </button>
+
+    <div class="alert alert-success mt-2" *ngIf="profileMessage">
+      {{ profileMessage }}
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- TAB 2 — ADDRESS LIST         -->
+  <!-- ============================= -->
+  <div *ngIf="activeTab === 'address'" class="tab-body card">
+
+    <h4>Mijn adressen</h4>
+
+    <div *ngFor="let a of addresses" class="address-item">
+      <div>
+        <strong>{{ a.addressLine }}</strong>  
+        <br>
+        {{ a.city }} – {{ a.province }} – {{ a.postalCode }}
+      </div>
+
+      <div>
+        <button class="btn btn-sm btn-danger" (click)="deleteAddress(a.id)">
+          Verwijderen
+        </button>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>Nieuw adres toevoegen</h5>
+
+    <input class="form-control" placeholder="Adres" [(ngModel)]="newAddress.addressLine">
+    <input class="form-control" placeholder="Stad" [(ngModel)]="newAddress.city">
+    <input class="form-control" placeholder="Provincie" [(ngModel)]="newAddress.province">
+    <input class="form-control" placeholder="Postcode" [(ngModel)]="newAddress.postalCode">
+
+    <button class="btn btn-dark mt-2 w-100" (click)="addAddress()">
+      Toevoegen
+    </button>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- TAB 3 — CUSTOMER ORDERS      -->
+  <!-- ============================= -->
+  <div *ngIf="activeTab === 'orders'" class="tab-body card">
+
+    <h4>Mijn bestellingen</h4>
+
+    <div *ngFor="let o of pagedOrders" class="order-item clickable" [routerLink]="['/Order', o.id]">
+      <div>
+        <strong>Bestelling #{{ o.orderNumber }}</strong><br>
+        {{ o.createdAt | date:'medium' }}<br>
+        <span class="status" 
+              [class.pending]="o.status === 'Pending'"
+              [class.paid]="o.status === 'Paid'"
+              [class.cancelled]="o.status === 'Cancelled'">
+              {{ o.status }}
+            </span>
+       
+      </div>
+
+      <div class="price">
+        €{{ o.totalPrice }}
+      </div>
+    </div>
+
+     <app-pagination
+      [totalItems]="orders.length"
+      [pageSize]="orderPageSize"
+      [(currentPage)]="orderPage">
+    </app-pagination>
+      <ng-template #noOrder>
+        <p class="empty">Geen bestellingen gevonden.</p>
+      </ng-template>
+  </div>
+
+</div>

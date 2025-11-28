@@ -1,0 +1,30 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.page-btn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-btn:hover {
+  background: #e6e6e6;
+}
+
+.page-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
