@@ -28,11 +28,11 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 // ------------------- CORS --------------------
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
-        policy
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod());
+    options.AddPolicy("AllowAngular", policy =>
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials());
 });
 
 // ------------------- JSON + HTTP CONTEXT --------------------
@@ -67,7 +67,7 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-
+app.UseCors("AllowAngular"); // ONLY THIS!!
 
 app.UseStaticFiles();
 
