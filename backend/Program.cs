@@ -26,22 +26,15 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 // ------------------- CORS --------------------
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowAll", policy =>
-//        policy
-//            .AllowAnyOrigin()
-//            .AllowAnyHeader()
-//            .AllowAnyMethod());
-//});
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular", policy =>
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials());
+    options.AddPolicy("AllowAll", policy =>
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
+
 // ------------------- JSON + HTTP CONTEXT --------------------
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers()
