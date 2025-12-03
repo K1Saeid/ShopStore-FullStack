@@ -28,14 +28,15 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 // ------------------- CORS --------------------
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        policy => policy
+    options.AddPolicy("AllowAll", policy =>
+        policy
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
 
 // ------------------- JSON + HTTP CONTEXT --------------------
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
     {
@@ -43,11 +44,8 @@ builder.Services.AddControllers()
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
-builder.Services.AddHttpContextAccessor();
-
 // ------------------- SESSION --------------------
 builder.Services.AddDistributedMemoryCache();
-
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -70,10 +68,11 @@ app.UseSwaggerUI(c =>
 
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
+
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseSession();    // <-- خیلی مهم
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllers();
