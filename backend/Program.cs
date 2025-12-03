@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 
 
 //// Add services to the container.
@@ -71,7 +71,7 @@ builder.Services.AddSession(options =>
 
 var app = builder.Build();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+
 app.Urls.Add($"http://0.0.0.0:{port}");
 
 app.UseCors("AllowAngular");
