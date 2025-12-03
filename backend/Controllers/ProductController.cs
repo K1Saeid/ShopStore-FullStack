@@ -28,7 +28,7 @@ public class ProductController(IProductRepository repository , ICategoryReposito
 
         return Ok(product);
     }
-
+   
     [HttpPost]
     public async Task<ActionResult> Post(ProductCreateDto dto)
     {
