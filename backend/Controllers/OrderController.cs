@@ -27,20 +27,25 @@ public class OrderController : ControllerBase
             UserId = dto.UserId,
             TotalPrice = dto.TotalPrice,
             Status = "Pending",
-            Items = dto.Items.Select(i => new OrderItem
-            {
-                ProductId = i.ProductId,
-                Quantity = i.Quantity,
-                Size = i.Size,
-                Color = i.Color,
-                Price = i.Price
-            }).ToList()
+            OrderNumber = Guid.NewGuid().ToString("N"),
+            CreatedAt = DateTime.UtcNow,
         };
+
+        order.Items = dto.Items.Select(i => new OrderItem
+        {
+            ProductId = i.ProductId,
+            Quantity = i.Quantity,
+            Size = i.Size,
+            Color = i.Color,
+            Price = i.Price,
+            Order = order
+        }).ToList();
 
         await _orderRepo.CreateOrderAsync(order);
 
         return Ok(order.Id);
     }
+
 
 
     [HttpGet("details/{id}")]
