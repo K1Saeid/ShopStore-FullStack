@@ -15,9 +15,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-// Add services to the container.
+//// Add services to the container.
+//builder.Services.AddDbContext<ShopContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDb")));
+
+// Add DbContext with PostgreSQL
 builder.Services.AddDbContext<ShopContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDb")));
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -65,6 +71,8 @@ builder.Services.AddSession(options =>
 
 var app = builder.Build();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://0.0.0.0:{port}");
 
 app.UseCors("AllowAngular");
 
