@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // ------------------- ADD HTTP CONTEXT --------------------
-builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
+builder.Services.AddHttpContextAccessor(); 
 
 // ------------------- CONTROLLERS --------------------
 builder.Services.AddControllers();
