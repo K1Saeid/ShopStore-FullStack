@@ -1,21 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopStore.Models;
 using ShopStore.Repositories;
-using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-// ------------------- CORS --------------------
-
-
-// ------------------- ADD HTTP CONTEXT --------------------
-builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
-
-// ------------------- CONTROLLERS --------------------
-builder.Services.AddControllers();
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
-
 if (!string.IsNullOrEmpty(port))
 {
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
@@ -45,7 +35,7 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
-// ------------------- CONTROLLERS --------------------
+// ------------------- JSON + HTTP CONTEXT --------------------
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
     {
@@ -53,25 +43,39 @@ builder.Services.AddControllers()
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
-builder.Services.AddOpenApi();
+builder.Services.AddHttpContextAccessor();
+
+// ------------------- SESSION --------------------
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// ------------------- PORT BINDING --------------------
-
-
-// ------------------- SWAGGER ALWAYS ON --------------------
+// ------------------- SWAGGER --------------------
 app.MapOpenApi();
-app.UseSwaggerUI(options =>
+app.UseSwaggerUI(c =>
 {
-    options.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
-    options.RoutePrefix = "swagger";
+    c.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
+    c.RoutePrefix = "swagger";
 });
 
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
 app.UseStaticFiles();
+
+app.UseRouting();
+app.UseSession();    // <-- خیلی مهم
+app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();
