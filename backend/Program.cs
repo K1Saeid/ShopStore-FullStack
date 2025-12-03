@@ -2,6 +2,9 @@
 using ShopStore.Models;
 using ShopStore.Repositories;
 using Microsoft.OpenApi.Models;
+using System.Text;
+using Microsoft.AspNetCore.Builder;
+
 
 var builder = WebApplication.CreateBuilder(args);
 // ------------------- CORS --------------------
@@ -20,6 +23,13 @@ if (!string.IsNullOrEmpty(port))
 {
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 }
+
+builder.Services.AddAuthorization(); // Roles, Policies
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
 
 // ------------------- DATABASE --------------------
 builder.Services.AddDbContext<ShopContext>(options =>
@@ -43,6 +53,17 @@ builder.Services.AddCors(options =>
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
+});
+builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 // ------------------- CONTROLLERS --------------------
@@ -72,6 +93,7 @@ app.UseSwaggerUI(options =>
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
 app.UseStaticFiles();
+app.UseSession();
 app.MapControllers();
 
 app.Run();
