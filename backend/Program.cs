@@ -6,7 +6,12 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // ------------------- PORT FOR RAILWAY --------------------
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var port = Environment.GetEnvironmentVariable("PORT");
+
+if (!string.IsNullOrEmpty(port))
+{
+    builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+}
 
 // ------------------- DATABASE --------------------
 builder.Services.AddDbContext<ShopContext>(options =>
@@ -46,7 +51,7 @@ builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 
 // ------------------- PORT BINDING --------------------
-app.Urls.Add("http://0.0.0.0:8080");
+
 
 // ------------------- SWAGGER ALWAYS ON --------------------
 app.MapOpenApi();
