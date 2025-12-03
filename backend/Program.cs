@@ -1,40 +1,33 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShopStore.Models;
 using ShopStore.Repositories;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+// ------------------- CORS --------------------
 
-// ------------------- DETECT ENVIRONMENT --------------------
-bool isProduction = builder.Environment.IsProduction();
 
-// ------------------- DATABASE --------------------
-if (isProduction)
-{
-    // Railway → PostgreSQL
-    builder.Services.AddDbContext<ShopContext>(options =>
-    {
-        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
-}
-else
-{
-    // Local → SQL Server
-    builder.Services.AddDbContext<ShopContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDb"));
-    });
-}
+// ------------------- ADD HTTP CONTEXT --------------------
+builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
+
+// ------------------- CONTROLLERS --------------------
+builder.Services.AddControllers();
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
+
 if (!string.IsNullOrEmpty(port))
 {
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 }
 
-// ------------------- DEPENDENCY INJECTION --------------------
+// ------------------- DATABASE --------------------
+builder.Services.AddDbContext<ShopContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+// ------------------- REPOSITORIES --------------------
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -46,14 +39,13 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
-        config => config
+        policy => policy
             .AllowAnyOrigin()
             .AllowAnyHeader()
-            .AllowAnyMethod()
-    );
+            .AllowAnyMethod());
 });
 
-// ------------------- CONTROLLERS + JSON --------------------
+// ------------------- CONTROLLERS --------------------
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
     {
@@ -61,27 +53,16 @@ builder.Services.AddControllers()
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
-// ------------------- HTTP CONTEXT --------------------
-builder.Services.AddHttpContextAccessor();
-
-// ------------------- SESSION --------------------
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
-
-// ------------------- OPENAPI / SWAGGER --------------------
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-// ------------------- SWAGGER --------------------
-app.MapOpenApi();
+// ------------------- PORT BINDING --------------------
 
+
+// ------------------- SWAGGER ALWAYS ON --------------------
+app.MapOpenApi();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
@@ -90,11 +71,8 @@ app.UseSwaggerUI(options =>
 
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
-
 app.UseStaticFiles();
-
 app.UseSession();
-
 app.MapControllers();
 
 app.Run();
