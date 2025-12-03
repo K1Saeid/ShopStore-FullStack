@@ -5,7 +5,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Read PORT for Railway Hosting
+// ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 
 // ------------------- DATABASE --------------------
@@ -45,14 +45,15 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-// Serve on Railway port
+// ------------------- PORT BINDING --------------------
 app.Urls.Add($"http://0.0.0.0:{port}");
 
-// ------------------- SWAGGER ALWAYS ENABLED --------------------
+// ------------------- SWAGGER ALWAYS ON --------------------
 app.MapOpenApi();
 app.UseSwaggerUI(options =>
 {
-    options.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
+    // IMPORTANT FOR RAILWAY
+    options.SwaggerEndpoint("openapi/v1.json", "ShopStore API V1");
 });
 
 // ------------------- PIPELINE --------------------
