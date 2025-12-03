@@ -74,7 +74,7 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-
+app.UseCors("AllowAll");
 
 app.UseStaticFiles();
 
