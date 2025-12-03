@@ -17,7 +17,7 @@ public class AuthController : ControllerBase
     {
         _userRepository = userRepository;
     }
-   
+
     [HttpPost("signup")]
     public async Task<IActionResult> Register([FromBody] RegisterDto model)
     {
@@ -31,13 +31,18 @@ public class AuthController : ControllerBase
             PasswordHash = HashPassword(model.Password),
             Role = "Customer",
             Status = "Active",
-            CreatedAt = DateTime.Now
+            CreatedAt = DateTime.UtcNow,
+
+            Phone = "", // چون NOT NULL است
+            LastLoginAt = DateTime.UtcNow,    // چون NOT NULL است
+            LastActivity = DateTime.UtcNow    // چون NOT NULL است
         };
 
         await _userRepository.AddUserAsync(user);
 
         return Ok(new { message = "User registered successfully" });
     }
+
 
 
     [HttpPost("signin")]
