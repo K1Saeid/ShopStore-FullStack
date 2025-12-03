@@ -52,8 +52,7 @@ app.Urls.Add("http://0.0.0.0:8080");
 app.MapOpenApi();
 app.UseSwaggerUI(options =>
 {
-    // IMPORTANT FOR RAILWAY
-    options.SwaggerEndpoint("openapi/v1.json", "ShopStore API V1");
+    options.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
     options.RoutePrefix = "swagger";
 });
 
