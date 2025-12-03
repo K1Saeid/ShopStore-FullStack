@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // ------------------- ADD HTTP CONTEXT --------------------
-builder.Services.AddHttpContextAccessor(); 
+builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
 
 // ------------------- CONTROLLERS --------------------
 builder.Services.AddControllers();
@@ -72,7 +72,6 @@ app.UseSwaggerUI(options =>
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
 app.UseStaticFiles();
-app.UseSession();
 app.MapControllers();
 
 app.Run();
