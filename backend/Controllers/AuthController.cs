@@ -44,10 +44,10 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] UserLoginDto login)
     {
         var user = await _userRepository.GetByEmailAsync(login.Email);
-        user.LastActivity = DateTime.Now;
+        
         if (user == null)
             return Unauthorized("User not found");
-
+        user.LastActivity = DateTime.Now;
         if (user.PasswordHash != HashPassword(login.Password))
 
             return Unauthorized("Invalid password");
