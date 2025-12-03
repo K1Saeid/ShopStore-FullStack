@@ -1,43 +1,40 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using ShopStore.Models;
 using ShopStore.Repositories;
 using Microsoft.OpenApi.Models;
-using System.Text;
-using Microsoft.AspNetCore.Builder;
-
 
 var builder = WebApplication.CreateBuilder(args);
-// ------------------- CORS --------------------
 
+// ------------------- DETECT ENVIRONMENT --------------------
+bool isProduction = builder.Environment.IsProduction();
 
-// ------------------- ADD HTTP CONTEXT --------------------
-builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
-
-// ------------------- CONTROLLERS --------------------
-builder.Services.AddControllers();
+// ------------------- DATABASE --------------------
+if (isProduction)
+{
+    // Railway → PostgreSQL
+    builder.Services.AddDbContext<ShopContext>(options =>
+    {
+        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
+}
+else
+{
+    // Local → SQL Server
+    builder.Services.AddDbContext<ShopContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDb"));
+    });
+}
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
-
 if (!string.IsNullOrEmpty(port))
 {
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 }
 
-builder.Services.AddAuthorization(); // Roles, Policies
-builder.Services.AddControllers()
-    .AddJsonOptions(opt =>
-    {
-        opt.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
-    });
-
-// ------------------- DATABASE --------------------
-builder.Services.AddDbContext<ShopContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-// ------------------- REPOSITORIES --------------------
+// ------------------- DEPENDENCY INJECTION --------------------
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -49,24 +46,14 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
-        policy => policy
+        config => config
             .AllowAnyOrigin()
             .AllowAnyHeader()
-            .AllowAnyMethod());
-});
-builder.Services.AddOpenApi();
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddDistributedMemoryCache();
-
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
+            .AllowAnyMethod()
+    );
 });
 
-// ------------------- CONTROLLERS --------------------
+// ------------------- CONTROLLERS + JSON --------------------
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
     {
@@ -74,16 +61,27 @@ builder.Services.AddControllers()
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
+// ------------------- HTTP CONTEXT --------------------
+builder.Services.AddHttpContextAccessor();
+
+// ------------------- SESSION --------------------
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// ------------------- OPENAPI / SWAGGER --------------------
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-// ------------------- PORT BINDING --------------------
-
-
-// ------------------- SWAGGER ALWAYS ON --------------------
+// ------------------- SWAGGER --------------------
 app.MapOpenApi();
+
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/openapi/v1.json", "ShopStore API V1");
@@ -92,8 +90,11 @@ app.UseSwaggerUI(options =>
 
 // ------------------- PIPELINE --------------------
 app.UseCors("AllowAll");
+
 app.UseStaticFiles();
+
 app.UseSession();
+
 app.MapControllers();
 
 app.Run();
