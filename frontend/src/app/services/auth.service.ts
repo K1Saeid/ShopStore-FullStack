@@ -7,30 +7,29 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = `${environment.apiBaseUrl}/Auth`;
-  private userApi = `${environment.apiBaseUrl}/User`;
+
+  private authApi = `${environment.apiBaseUrl}/auth`;
+  private userApi = `${environment.apiBaseUrl}/user`;
 
   private currentUserSubject = new BehaviorSubject<any>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) {
-
-    if (this.isBrowser()) {
-      const user = this.getCurrentUser();
-      if (user) this.currentUserSubject.next(user);
-    }
+    this.syncWithServer();  // بعد از refresh از Session واقعی backend می‌گیرد
   }
 
-  // ===========================
+  // ============================================
   // AUTH
-  // ===========================
+  // ============================================
 
   signup(data: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/signup`, data);
+    return this.http.post(`${this.authApi}/signup`, data, {
+      withCredentials: true
+    });
   }
 
-  signin(user: any) {
-    return this.http.post(`${this.apiUrl}/signin`, user, {
+  signin(credentials: any): Observable<any> {
+    return this.http.post(`${this.authApi}/signin`, credentials, {
       withCredentials: true
     });
   }
@@ -42,7 +41,25 @@ export class UserService {
     }
   }
 
-  setCurrentUser(user: any): void {
+  // ============================================
+  // CURRENT USER SYNC
+  // ============================================
+
+  /** هنگام لود Angular از backend user واقعی را می‌گیرد */
+  syncWithServer() {
+    this.http.get(`${this.authApi}/current-user`, {
+      withCredentials: true
+    }).subscribe({
+      next: (user: any) => {
+        this.setCurrentUser(user);
+      },
+      error: () => {
+        this.logout();
+      }
+    });
+  }
+
+  setCurrentUser(user: any) {
     if (this.isBrowser()) {
       localStorage.setItem('user', JSON.stringify(user));
       this.currentUserSubject.next(user);
@@ -51,59 +68,63 @@ export class UserService {
 
   getCurrentUser(): any {
     if (!this.isBrowser()) return null;
-
-    const user = localStorage.getItem('user');
-    return user ? JSON.parse(user) : null;
+    const data = localStorage.getItem('user');
+    return data ? JSON.parse(data) : null;
   }
 
   private isBrowser(): boolean {
-    return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+    return typeof window !== 'undefined';
   }
 
-  // ===========================
+  // ============================================
   // USER CRUD
-  // ===========================
+  // ============================================
 
   getAllUsers(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/users`);
+    return this.http.get<any[]>(`${this.authApi}/users`, {
+      withCredentials: true
+    });
   }
 
   getUserById(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/users/${id}`);
+    return this.http.get(`${this.authApi}/users/${id}`, {
+      withCredentials: true
+    });
   }
 
-  getUserAddresses(userId: number) {
-    return this.http.get<any[]>(`${this.apiUrl}/${userId}`);
+  getUserAddresses(userId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${environment.apiBaseUrl}/address/${userId}`, {
+      withCredentials: true
+    });
   }
 
   updateProfile(id: number, data: any) {
-    return this.http.put(`${this.apiUrl}/update-profile/${id}`, data);
+    return this.http.put(`${this.authApi}/update-profile/${id}`, data, {
+      withCredentials: true
+    });
   }
 
-  // ===========================
-  // ACTIVE USERS (REAL-TIME)
-  // ===========================
+  // ============================================
+  // ACTIVE USERS (ADMIN)
+  // ============================================
 
-  /** پینگ کردن فعالیت کاربر */
   updateActivity(userId: number) {
     return this.http.post(
       `${this.userApi}/update-activity/${userId}`,
-      {}
+      {},
+      { withCredentials: true }
     );
   }
 
-  /** گرفتن تعداد کاربران فعال */
   getActiveUsers() {
-    return this.http.get<number>(
-      `${this.userApi}/active-users`
-    );
+    return this.http.get<number>(`${this.userApi}/active-users`, {
+      withCredentials: true
+    });
   }
 
-  /** پینگ هر 30 ثانیه */
   startActivityPing(userId: number) {
     setInterval(() => {
       this.updateActivity(userId).subscribe();
     }, 30000);
   }
-
 }
