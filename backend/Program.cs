@@ -46,7 +46,7 @@ builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 
 // ------------------- PORT BINDING --------------------
-app.Urls.Add($"http://0.0.0.0:{port}");
+app.Urls.Add("http://0.0.0.0:8080");
 
 // ------------------- SWAGGER ALWAYS ON --------------------
 app.MapOpenApi();
