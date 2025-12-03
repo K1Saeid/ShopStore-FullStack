@@ -2,6 +2,7 @@
 using ShopStore.Repositories;
 using ShopStore.Models;
 using Microsoft.AspNetCore.Authorization;
+using ShopStore.DTOs;
 
 
 namespace ShopStore.Controllers;
@@ -28,12 +29,32 @@ public class ProductController(IProductRepository repository , ICategoryReposito
         return Ok(product);
     }
     [HttpPost]
-    public async Task<ActionResult> Post(Product product)
+    [HttpPost]
+    public async Task<ActionResult> Post(ProductCreateDto dto)
     {
+        var product = new Product
+        {
+            Name = dto.Name,
+            Description = dto.Description,
+            Brand = dto.Brand,
+            Gender = dto.Gender,
+            Sizes = dto.Sizes,
+            Colors = dto.Colors,
+            Price = dto.Price,
+            DiscountPrice = dto.DiscountPrice,
+            InStock = dto.InStock,
+            ItemsLeft = dto.ItemsLeft,
+            ImageUrl = dto.ImageUrl,
+            Slug = dto.Slug,
+            CategoryId = dto.CategoryId
+        };
+
         await _repository.AddAsync(product);
+
         return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
     }
-  
+
+
     [HttpPut("{id}")]
     public async Task<ActionResult> Put(int id, Product product)
     {
