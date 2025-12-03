@@ -54,6 +54,7 @@ app.UseSwaggerUI(options =>
 {
     // IMPORTANT FOR RAILWAY
     options.SwaggerEndpoint("openapi/v1.json", "ShopStore API V1");
+    options.RoutePrefix = "swagger";
 });
 
 // ------------------- PIPELINE --------------------
