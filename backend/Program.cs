@@ -4,6 +4,14 @@ using ShopStore.Repositories;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+// ------------------- CORS --------------------
+
+
+// ------------------- ADD HTTP CONTEXT --------------------
+builder.Services.AddHttpContextAccessor();  // <--- اضافه کن
+
+// ------------------- CONTROLLERS --------------------
+builder.Services.AddControllers();
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
