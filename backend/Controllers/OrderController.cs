@@ -197,30 +197,39 @@ public class OrderController : ControllerBase
     [HttpGet("stats/today")]
     public async Task<IActionResult> GetTodayStats()
     {
-        var today = DateTime.Today;
-
-        var ordersToday = await _context.Orders
-            .Where(o => o.CreatedAt.Date == today)
-            .Include(o => o.User)
-            .ToListAsync();
-
-        var revenueToday = ordersToday.Sum(o => o.TotalPrice);
-        var orderCount = ordersToday.Count;
-
-        var newCustomersToday = await _context.Users
-            .Where(u => u.CreatedAt.Date == today)
-            .CountAsync();
-
-        var avgOrderValue = orderCount > 0 ? revenueToday / orderCount : 0;
-
-        return Ok(new
+        try
         {
-            revenueToday,
-            orderCount,
-            newCustomersToday,
-            avgOrderValue
-        });
+            var today = DateTime.UtcNow.Date;
+            var tomorrow = today.AddDays(1);
+
+            var ordersToday = await _context.Orders
+                .Where(o => o.CreatedAt >= today && o.CreatedAt < tomorrow)
+                .Include(o => o.User)
+                .ToListAsync();
+
+            var revenueToday = ordersToday.Sum(o => o.TotalPrice);
+            var orderCount = ordersToday.Count;
+
+            var newCustomersToday = await _context.Users
+                .Where(u => u.CreatedAt >= today && u.CreatedAt < tomorrow)
+                .CountAsync();
+
+            var avgOrderValue = orderCount > 0 ? revenueToday / orderCount : 0;
+
+            return Ok(new
+            {
+                revenueToday,
+                orderCount,
+                newCustomersToday,
+                avgOrderValue
+            });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
     }
+
 
     [HttpGet("stats/status")]
     public async Task<IActionResult> GetOrderStatusStats()

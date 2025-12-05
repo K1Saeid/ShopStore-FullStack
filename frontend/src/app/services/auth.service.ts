@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,10 +30,15 @@ export class UserService {
   }
 
   signin(credentials: any): Observable<any> {
-    return this.http.post(`${this.authApi}/signin`, credentials, {
-      withCredentials: true
-    });
-  }
+  return this.http.post(`${this.authApi}/signin`, credentials, {
+    withCredentials: true
+  }).pipe(
+    tap((user: any) => {
+      this.setCurrentUser(user);
+    })
+  );
+}
+
 
   logout(): void {
     if (this.isBrowser()) {

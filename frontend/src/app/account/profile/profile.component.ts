@@ -55,13 +55,13 @@ export class ProfileComponent {
     }
   });
 
-  this.userService.currentUser$.subscribe(user => {
-  if (user) {
+    this.userService.currentUser$.subscribe(user => {
     this.user = user;
-    this.loadAddresses();  // 🔥 این خط ضروری بود
-    this.loadOrders();
-  }
-});
+    if (user) {
+      this.loadAddresses();
+      this.loadOrders();
+    }
+  });
 
 }
 
