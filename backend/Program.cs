@@ -73,7 +73,8 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-app.UseCors("AllowAngular"); // ONLY THIS!!
+app.UseCors("AllowFrontend");
+// ONLY THIS!!
 
 app.UseStaticFiles();
 
