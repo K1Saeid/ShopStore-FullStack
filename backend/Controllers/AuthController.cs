@@ -63,13 +63,14 @@ public class AuthController : ControllerBase
         user.LastActivity = DateTime.UtcNow;
         await _users.UpdateAsync(user);
 
-        HttpContext.Session.SetString("User", System.Text.Json.JsonSerializer.Serialize(new
+        HttpContext.Session.SetString("User", System.Text.Json.JsonSerializer.Serialize(new CurrentUserDto
         {
-            user.Id,
-            user.FullName,
-            user.Email,
-            user.Role
+            Id = user.Id,
+            FullName = user.FullName,
+            Email = user.Email,
+            Role = user.Role
         }));
+
 
         return Ok(new
         {
@@ -81,24 +82,27 @@ public class AuthController : ControllerBase
     }
 
     // ======================== SIGNOUT ========================
-    [HttpPost("signout")]
+    [HttpPost("logout")]
     public IActionResult Logout()
     {
         HttpContext.Session.Clear();
         return Ok(new { message = "Logged out" });
     }
 
+
     // ======================== CURRENT USER ========================
     [HttpGet("current-user")]
-    public IActionResult CurrentUser()
+    public IActionResult GetCurrentUser()
     {
         var json = HttpContext.Session.GetString("User");
 
         if (json == null)
             return Unauthorized();
 
-        return Ok(System.Text.Json.JsonSerializer.Deserialize<object>(json)!);
+        var user = System.Text.Json.JsonSerializer.Deserialize<CurrentUserDto>(json);
+        return Ok(user);
     }
+
 
     // ======================== GET USERS FOR ADMIN ========================
     [HttpGet("users")]
