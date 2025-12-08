@@ -7,53 +7,63 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class CartService {
-    
+
   private apiUrl = `${environment.apiBaseUrl}/cart`;
 
-  
-  constructor(private http: HttpClient) { }
+  cartCount = new BehaviorSubject<number>(0);
 
+  constructor(private http: HttpClient) {}
+
+  // ============================
+  // GET CART
+  // ============================
   getCart(userId: number) {
     return this.http.get(`${this.apiUrl}/${userId}`);
   }
 
+  // ============================
+  // ADD TO CART
+  // ============================
   addToCart(item: any, callback?: (success: boolean) => void) {
-    this.http.post<any>(`${environment.apiBaseUrl}/Cart/add`, item)
+    this.http.post<any>(`${this.apiUrl}/add`, item)
       .subscribe({
         next: (res) => {
-          this.cartCount.next(res.cartItemsCount);  // 🔥 الان مقدار درست میاد
+          this.cartCount.next(res.cartItemsCount);
           callback?.(true);
         },
         error: () => callback?.(false)
       });
   }
 
-
-
-  refreshCartCount(userId: number) {
-    this.getCart(userId).subscribe((cart: any) => {
-      const totalQty = cart.items.reduce((sum: number, item: any) => sum + item.quantity, 0);
-      this.cartCount.next(totalQty);
-    });
-  }
-
-
-
+  // ============================
+  // UPDATE QUANTITY
+  // ============================
   updateQty(itemId: number, qty: number) {
-    return this.http.put(`${this.apiUrl}/update-qty/${itemId}/${qty}`, { withCredentials: true }, {});
+    return this.http.put(`${this.apiUrl}/update-qty/${itemId}/${qty}`, {});
   }
 
+  // ============================
+  // REMOVE ITEM
+  // ============================
   removeItem(itemId: number) {
-    return this.http.delete(`${this.apiUrl}/item/${itemId}` , { withCredentials: true });
+    return this.http.delete(`${this.apiUrl}/item/${itemId}`);
   }
 
+  // ============================
+  // CLEAR CART (server-side)
+  // ============================
   clearCart(userId: number) {
-    return this.http.delete(`${this.apiUrl}/clear/${userId}` , { withCredentials: true });
+    return this.http.delete(`${this.apiUrl}/clear/${userId}`);
   }
- 
- cartCount = new BehaviorSubject<number>(0);
-setCartCount(count: number) {
-  this.cartCount.next(count);
-}
 
+  // ============================
+  // CART COUNT
+  // ============================
+  setCartCount(count: number) {
+    this.cartCount.next(count);
+  }
+
+  clearCartCount() {
+    this.cartCount.next(0);
+  }
 }

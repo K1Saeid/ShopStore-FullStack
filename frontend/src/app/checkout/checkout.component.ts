@@ -34,12 +34,10 @@ export class CheckoutComponent {
 
   ngOnInit() {
 
-    // ⛔ مهم: بعد از refresh حتماً از currentUser$ استفاده کن
     this.userService.currentUser$.subscribe(user => {
       if (user) {
         this.user = user;
 
-        // بعد از اینکه user آمد، cart را بگیر
         this.cartService.getCart(user.id).subscribe((res: any) => {
           this.cart = res;
         });

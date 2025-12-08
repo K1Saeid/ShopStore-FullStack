@@ -100,7 +100,11 @@ addToCart() {
 
     this.cartService.addToCart(item, (success) => {
     if (success) {
-      this.cartService.refreshCartCount(user.id);
+      this.cartService.getCart(user.id).subscribe((cart: any) => {
+    const totalQty = cart.items.reduce((sum: number, item: any) => sum + item.quantity, 0);
+    this.cartService.setCartCount(totalQty);
+});
+
       this.showAlert();
     }
   });

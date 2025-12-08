@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { tap } from 'rxjs/operators';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class UserService {
   private currentUserSubject = new BehaviorSubject<any>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient ,  private cartService: CartService) {
     this.syncWithServer();  // بعد از refresh از Session واقعی backend می‌گیرد
   }
 
@@ -40,12 +41,24 @@ export class UserService {
 }
 
 
-  logout(): void {
-    if (this.isBrowser()) {
-      localStorage.removeItem('user');
-      this.currentUserSubject.next(null);
-    }
+  logout() {
+  if (this.isBrowser()) {
+    localStorage.removeItem('user');
+
+    // ریست کامل BehaviorSubject
+    this.currentUserSubject.next(null);
+
+    // پاک کردن سبد خرید
+    try {
+      this.cartService.clearCartCount();
+    } catch {}
+
+    // به سرور هم اعلام می‌کنیم سشن را ببند
+    this.http.post(`${this.authApi}/logout`, {}, { withCredentials: true })
+      .subscribe(() => {});
   }
+}
+
 
   // ============================================
   // CURRENT USER SYNC
@@ -74,8 +87,7 @@ export class UserService {
 
   getCurrentUser(): any {
     if (!this.isBrowser()) return null;
-    const data = localStorage.getItem('user');
-    return data ? JSON.parse(data) : null;
+   
   }
 
   private isBrowser(): boolean {
