@@ -64,6 +64,8 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+    options.Cookie.SameSite = SameSiteMode.None; // مهم
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -80,7 +82,13 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-app.UseCors("AllowFrontend");
+app.UseCors(builder => builder
+    .WithOrigins("https://K1Saeid.github.io")
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials() // مهم
+);
+
 
 
 app.UseStaticFiles();
