@@ -7,110 +7,135 @@ using System.Text;
 
 namespace ShopStore.Controllers;
 
-[Route("api/auth")]
 [ApiController]
+[Route("api/auth")]
 public class AuthController : ControllerBase
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserRepository _users;
 
-    public AuthController(IUserRepository userRepository)
+    public AuthController(IUserRepository users)
     {
-        _userRepository = userRepository;
+        _users = users;
     }
 
-    // ==============================
-    // REGISTER
-    // ==============================
-
+    // ======================== SIGNUP ========================
     [HttpPost("signup")]
-    public async Task<IActionResult> Register([FromBody] RegisterDto model)
+    public async Task<IActionResult> Register([FromBody] RegisterDto dto)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var existingUser = await _userRepository.GetByEmailAsync(model.Email);
-        if (existingUser != null)
+        var existing = await _users.GetByEmailAsync(dto.Email);
+        if (existing != null)
             return Conflict(new { message = "Email already exists" });
 
         var user = new User
         {
-            FullName = model.FullName,
-            Email = model.Email,
-            PasswordHash = HashPassword(model.Password),
+            FullName = dto.FullName,
+            Email = dto.Email,
+            PasswordHash = Hash(dto.Password),
             Role = "Customer",
             Status = "Active",
-            CreatedAt = DateTime.UtcNow,
             Phone = "",
-            LastLoginAt = DateTime.UtcNow,
-            LastActivity = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            LastActivity = DateTime.UtcNow,
+            LastLoginAt = DateTime.UtcNow
         };
 
-        await _userRepository.AddUserAsync(user);
+        await _users.AddUserAsync(user);
 
         return Ok(new { message = "User registered successfully" });
     }
 
-    // ==============================
-    // LOGIN
-    // ==============================
-
+    // ======================== SIGNIN ========================
     [HttpPost("signin")]
-    public async Task<IActionResult> Login([FromBody] UserLoginDto login)
+    public async Task<IActionResult> Login([FromBody] UserLoginDto dto)
     {
-        var user = await _userRepository.GetByEmailAsync(login.Email);
+        var user = await _users.GetByEmailAsync(dto.Email);
 
         if (user == null)
             return Unauthorized("User not found");
 
-        if (user.PasswordHash != HashPassword(login.Password))
+        if (user.PasswordHash != Hash(dto.Password))
             return Unauthorized("Invalid password");
 
-        var sessionUser = new CurrentUserDto
+        user.LastLoginAt = DateTime.UtcNow;
+        user.LastActivity = DateTime.UtcNow;
+        await _users.UpdateAsync(user);
+
+        HttpContext.Session.SetString("User", System.Text.Json.JsonSerializer.Serialize(new
         {
-            Id = user.Id,
-            FullName = user.FullName,
-            Email = user.Email,
-            Role = user.Role
-        };
+            user.Id,
+            user.FullName,
+            user.Email,
+            user.Role
+        }));
 
-        HttpContext.Session.SetString("User",
-            System.Text.Json.JsonSerializer.Serialize(sessionUser));
-
-        return Ok(sessionUser);
+        return Ok(new
+        {
+            user.Id,
+            user.FullName,
+            user.Email,
+            user.Role
+        });
     }
 
-    // ==============================
-    // LOGOUT
-    // ==============================
-
-    [HttpPost("logout")]
+    // ======================== SIGNOUT ========================
+    [HttpPost("signout")]
     public IActionResult Logout()
     {
-        HttpContext.Session.Remove("User");
-        return Ok(new { message = "Signed out successfully" });
+        HttpContext.Session.Clear();
+        return Ok(new { message = "Logged out" });
     }
 
-    // ==============================
-    // CURRENT USER
-    // ==============================
-
+    // ======================== CURRENT USER ========================
     [HttpGet("current-user")]
-    public IActionResult GetCurrentUser()
+    public IActionResult CurrentUser()
     {
         var json = HttpContext.Session.GetString("User");
 
         if (json == null)
-            return Unauthorized(new { message = "No user logged in" });
+            return Unauthorized();
 
-        var user = System.Text.Json.JsonSerializer.Deserialize<CurrentUserDto>(json);
+        return Ok(System.Text.Json.JsonSerializer.Deserialize<object>(json)!);
+    }
+
+    // ======================== GET USERS FOR ADMIN ========================
+    [HttpGet("users")]
+    public async Task<IActionResult> GetUsers()
+    {
+        var users = await _users.GetAllUsersAsync();
+        return Ok(users);
+    }
+
+    [HttpGet("users/{id}")]
+    public async Task<IActionResult> GetUser(int id)
+    {
+        var user = await _users.GetUserByIdAsync(id);
+        if (user == null) return NotFound();
 
         return Ok(user);
     }
 
-    private string HashPassword(string password)
+    // ======================== UPDATE PROFILE ========================
+    [HttpPut("update-profile/{id}")]
+    public async Task<IActionResult> UpdateProfile(int id, [FromBody] UpdateUserDto dto)
+    {
+        var user = await _users.GetUserEntityByIdAsync(id);
+        if (user == null) return NotFound();
+
+        user.FullName = dto.FullName;
+        user.Phone = dto.Phone;
+
+        await _users.UpdateAsync(user);
+
+        return Ok(new { message = "Profile updated" });
+    }
+
+    // ======================== PASSWORD HASH ========================
+    private string Hash(string text)
     {
         using var sha = SHA256.Create();
-        var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-        return Convert.ToBase64String(bytes);
+        return Convert.ToBase64String(sha.ComputeHash(Encoding.UTF8.GetBytes(text)));
     }
 }

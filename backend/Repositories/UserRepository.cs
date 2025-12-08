@@ -24,7 +24,6 @@ public class UserRepository : IUserRepository
         await _context.SaveChangesAsync();
     }
 
-    
     public async Task<List<UserDto>> GetAllUsersAsync()
     {
         return await _context.Users
@@ -43,6 +42,7 @@ public class UserRepository : IUserRepository
             })
             .ToListAsync();
     }
+
     public async Task<UserDto?> GetUserByIdAsync(int id)
     {
         return await _context.Users
@@ -61,6 +61,7 @@ public class UserRepository : IUserRepository
             })
             .FirstOrDefaultAsync();
     }
+
     public async Task<User> GetUserEntityByIdAsync(int id)
     {
         return await _context.Users
@@ -68,26 +69,29 @@ public class UserRepository : IUserRepository
             .Include(u => u.Orders)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
+
     public async Task UpdateAsync(User user)
     {
         _context.Users.Update(user);
         await _context.SaveChangesAsync();
     }
+
     public async Task BlockUserAsync(int id)
     {
         var user = await _context.Users.FindAsync(id);
+
         if (user != null)
         {
             user.Status = "Blocked";
             await _context.SaveChangesAsync();
         }
     }
+
     public async Task<int> GetActiveUsersCountAsync()
     {
         var fiveMinutesAgo = DateTime.UtcNow.AddMinutes(-5);
 
-        return await _context.Users
-            .CountAsync(u => u.LastActivity >= fiveMinutesAgo);
+        return await _context.Users.CountAsync(u => u.LastActivity >= fiveMinutesAgo);
     }
 
     public async Task UpdateActivityAsync(int userId)
@@ -98,8 +102,4 @@ public class UserRepository : IUserRepository
         user.LastActivity = DateTime.UtcNow;
         await _context.SaveChangesAsync();
     }
-
-
 }
-
-
