@@ -28,12 +28,18 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 // ------------------- CORS --------------------
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular", policy =>
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials());
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins(
+            "https://k1saeid.github.io",
+            "https://k1saeid.github.io/ShopStore-FullStack"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
+    });
 });
+
 
 // ------------------- JSON + HTTP CONTEXT --------------------
 builder.Services.AddHttpContextAccessor();
