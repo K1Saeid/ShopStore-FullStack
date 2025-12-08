@@ -1,0 +1,22 @@
+{
+  "routes": {
+    "/": {},
+    "/account": {},
+    "/account/profile": {},
+    "/admin": {},
+    "/admin/categories": {},
+    "/admin/customers": {},
+    "/admin/dashboard": {},
+    "/admin/orders": {},
+    "/admin/products": {},
+    "/admin/products/add": {},
+    "/admin/settings": {},
+    "/auth": {},
+    "/auth/signin": {},
+    "/auth/signup": {},
+    "/cart": {},
+    "/checkout": {},
+    "/order-success": {},
+    "/products": {}
+  }
+}
