@@ -1,1 +1,103 @@
-<div class="auth-card"> <h3 class="title">Nieuw account aanmaken </h3> <form (ngSubmit)="onSubmit()" #signupForm="ngForm" novalidate> <!-- Full name --> <div class="mb-3"> <label class="form-label">Volledige naam</label> <input class="form-control" type="text" name="fullName" [(ngModel)]="fullName" required /> </div> <!-- Email --> <div class="mb-3"> <label class="form-label">Email</label> <input class="form-control" type="email" name="email" [(ngModel)]="email" required /> </div> <!-- Password --> <div class="mb-3"> <label class="form-label">Password</label> <input class="form-control" type="password" name="password" [(ngModel)]="password" required /> </div> <button type="submit" class="btn btn-dark w-100" [disabled]="!signupForm.valid"> Registreren </button> </form> <div class="text-center small mt-3"> Heb je al een account? <a routerLink="/auth/signin" class="link">Inloggen</a> </div> </div>
+<div class="auth-card">
+
+  <h3 class="title">Nieuw account aanmaken</h3>
+
+  <form (ngSubmit)="onSubmit()" #signupForm="ngForm" novalidate>
+
+    <!-- Full Name -->
+    <div class="mb-3">
+      <label class="form-label">Volledige naam</label>
+
+      <input
+        class="form-control"
+        type="text"
+        name="fullName"
+        [(ngModel)]="fullName"
+        required
+        minlength="3"
+        #nameField="ngModel">
+
+      <!-- FULL NAME ERRORS -->
+      <small class="text-danger" *ngIf="nameField.touched && nameField.errors?.['required']">
+        Naam is verplicht.
+      </small>
+
+      <small class="text-danger" *ngIf="nameField.touched && nameField.errors?.['minlength']">
+        Naam moet minimaal 3 tekens bevatten.
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+
+      <input
+        class="form-control"
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        email
+        #emailField="ngModel">
+
+      <!-- EMAIL ERRORS -->
+      <small class="text-danger" *ngIf="emailField.touched && emailField.errors?.['required']">
+        Email is verplicht.
+      </small>
+
+      <small class="text-danger" *ngIf="emailField.touched && emailField.errors?.['email']">
+        Voer een geldig email in.
+      </small>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="form-label">Wachtwoord</label>
+
+      <input
+        class="form-control"
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        minlength="6"
+        #passField="ngModel">
+
+      <!-- PASSWORD ERRORS -->
+      <small class="text-danger" *ngIf="passField.touched && passField.errors?.['required']">
+        Wachtwoord is verplicht.
+      </small>
+
+      <small class="text-danger" *ngIf="passField.touched && passField.errors?.['minlength']">
+        Minimaal 6 tekens vereist.
+      </small>
+    </div>
+
+    <!-- GENERAL ERROR -->
+    <div *ngIf="errorMessage" class="alert alert-danger py-2">
+      {{ errorMessage }}
+    </div>
+
+    <!-- GENERAL SUCCESS -->
+    <div *ngIf="successMessage" class="alert alert-success py-2">
+      {{ successMessage }}
+    </div>
+
+    <!-- BUTTON -->
+    <button
+      type="submit"
+      class="btn btn-dark w-100"
+      [disabled]="!signupForm.valid || loading">
+
+      <span *ngIf="!loading">Registreren</span>
+      <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+    </button>
+
+  </form>
+
+  <div class="text-center small mt-3">
+    Heb je al een account?
+    <a routerLink="/auth/signin" class="link">Inloggen</a>
+  </div>
+
+</div>

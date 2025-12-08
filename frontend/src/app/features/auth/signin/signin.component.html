@@ -1,6 +1,6 @@
 <div class="auth-card">
 
-  <h3 class="title">Welkom terug </h3>
+  <h3 class="title">Welkom terug</h3>
 
   <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
 
@@ -12,26 +12,43 @@
         class="form-control"
         name="email"
         [(ngModel)]="email"
-        required />
+        required
+        #emailField="ngModel">
+      
+      <small *ngIf="emailField.invalid && emailField.touched" class="text-danger">
+        Vul een geldig email adres in.
+      </small>
     </div>
 
     <!-- Password -->
     <div class="mb-3">
-      <label class="form-label">Password</label>
+      <label class="form-label">Wachtwoord</label>
       <input 
         type="password"
         class="form-control"
         name="password"
         [(ngModel)]="password"
-        required />
+        required
+        #passField="ngModel">
+
+      <small *ngIf="passField.invalid && passField.touched" class="text-danger">
+        Wachtwoord is verplicht.
+      </small>
+    </div>
+
+    <!-- ERROR BOX -->
+    <div *ngIf="errorMessage" class="alert alert-danger py-2">
+      {{ errorMessage }}
     </div>
 
     <!-- Button -->
     <button 
       type="submit" 
-      class="btn btn-dark w-100"
-      [disabled]="!loginForm.valid">
-      Inloggen
+      class="btn btn-dark w-100 d-flex justify-content-center align-items-center"
+      [disabled]="!loginForm.valid || loading">
+
+      <span *ngIf="!loading">Inloggen</span>
+      <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
     </button>
 
   </form>
@@ -40,7 +57,6 @@
   <div class="text-center mt-3 small">
     Heb je nog geen account?
     <a routerLink="/auth/signup" class="link">Aanmelden</a>
-   
   </div>
 
 </div>

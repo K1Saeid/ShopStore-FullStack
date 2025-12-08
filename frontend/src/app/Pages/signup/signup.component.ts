@@ -6,33 +6,48 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
+  standalone: true,
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css',
+  styleUrls: ['./signup.component.css'],
   imports: [FormsModule, CommonModule, RouterLink]
-
 })
 export class SignupComponent {
-  fullName: string = '';
-  email: string = '';
-  password: string = '';
+
+  fullName = '';
+  email = '';
+  password = '';
+
+  loading = false;
+  errorMessage: string | null = null;
+  successMessage: string | null = null;
 
   constructor(private userService: UserService, private router: Router) {}
 
   onSubmit() {
-    const user = {
-      fullName: this.fullName,
-      email: this.email,
-      password: this.password 
-    };
+  this.loading = true;
+  this.errorMessage = null;
+  this.successMessage = null;
 
-    this.userService.signup(user).subscribe({
-      next: (res) => {
-        alert('Registratie succesvol! U kunt nu inloggen.');
-        this.router.navigate(['/signin']);
-      },
-      error: (err) => {
-        alert('fout bij registratie. Probeer het opnieuw.');
-      }
-    });
-  }
+  const dto = {
+    fullName: this.fullName,
+    email: this.email,
+    password: this.password
+  };
+
+  this.userService.signup(dto).subscribe({
+    next: () => {
+      this.loading = false;
+      this.successMessage = "Registratie succesvol! U kunt nu inloggen.";
+
+      setTimeout(() => {
+        this.router.navigate(['/auth/signin']);
+      }, 1200);
+    },
+    error: () => {
+      this.loading = false;
+      this.errorMessage = "Registratie mislukt. Probeer opnieuw.";
+    }
+  });
+}
+
 }
