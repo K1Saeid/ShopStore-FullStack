@@ -21,8 +21,13 @@ public class AuthController : ControllerBase
     [HttpPost("signup")]
     public async Task<IActionResult> Register([FromBody] RegisterDto model)
     {
-        if (await _userRepository.GetByEmailAsync(model.Email) != null)
-            return BadRequest("Email already exists");
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        // Email already exists?
+        var existingUser = await _userRepository.GetByEmailAsync(model.Email);
+        if (existingUser != null)
+            return Conflict(new { message = "Email already exists" }); // <-- 409 Conflict
 
         var user = new User
         {
@@ -33,9 +38,9 @@ public class AuthController : ControllerBase
             Status = "Active",
             CreatedAt = DateTime.UtcNow,
 
-            Phone = "", // چون NOT NULL است
-            LastLoginAt = DateTime.UtcNow,    // چون NOT NULL است
-            LastActivity = DateTime.UtcNow    // چون NOT NULL است
+            Phone = "",
+            LastLoginAt = DateTime.UtcNow,
+            LastActivity = DateTime.UtcNow
         };
 
         await _userRepository.AddUserAsync(user);
