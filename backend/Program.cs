@@ -74,7 +74,15 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-app.UseCors("AllowFrontend");  // Only this!
+app.UseCors(builder => builder
+    .WithOrigins("https://K1Saeid.github.io")
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials() // مهم
+);
+app.UseCors("AllowFrontend");
+
+
 
 app.UseStaticFiles();
 app.UseRouting();
