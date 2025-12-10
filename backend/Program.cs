@@ -71,7 +71,7 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- MIDDLEWARE --------------------
-app.UseCors("AllowFrontend");
+
 
 app.UseStaticFiles();
 
