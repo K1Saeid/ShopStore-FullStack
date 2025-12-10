@@ -146,6 +146,7 @@ loadOrderStatusChart() {
 
     this.userService.getAllUsers().subscribe(users => {
       this.stats.totalCustomers = users.length;
+      
     });
 
     this.productService.getAllProducts().subscribe(products => {
