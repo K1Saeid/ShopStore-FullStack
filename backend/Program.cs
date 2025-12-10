@@ -5,18 +5,19 @@ using ShopStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ------------------- CLOUDINARY (SAFE METHOD) --------------------
-builder.Services.AddSingleton(provider =>
-{
-    var cloudName = Environment.GetEnvironmentVariable("CLOUDINARY_CLOUD_NAME");
-    var apiKey = Environment.GetEnvironmentVariable("CLOUDINARY_API_KEY");
-    var apiSecret = Environment.GetEnvironmentVariable("CLOUDINARY_API_SECRET");
+// ------------------- CLOUDINARY CONFIGURATION --------------------
+var cloudName = Environment.GetEnvironmentVariable("CLOUDINARY_CLOUD_NAME");
+var apiKey = Environment.GetEnvironmentVariable("CLOUDINARY_API_KEY");
+var apiSecret = Environment.GetEnvironmentVariable("CLOUDINARY_API_SECRET");
 
-    Console.WriteLine($"CloudName Loaded: {cloudName}");
-    Console.WriteLine($"ApiKey Loaded: {apiKey}");
+Console.WriteLine("CloudName = " + cloudName);
+Console.WriteLine("ApiKey = " + apiKey);
 
-    return new Cloudinary(new Account(cloudName, apiKey, apiSecret));
-});
+builder.Services.AddSingleton(new Cloudinary(new Account(
+    cloudName,
+    apiKey,
+    apiSecret
+)));
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
@@ -47,22 +48,20 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
             "https://k1saeid.github.io",
             "https://k1saeid.github.io/ShopStore-FullStack"
-        )
-        .AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowCredentials();
+        ).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
     });
 });
 
 builder.Services.AddControllers();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// ------------------- SWAGGER --------------------
+// SWAGGER
 app.MapOpenApi();
 app.UseSwaggerUI(c =>
 {
@@ -70,11 +69,9 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-// ------------------- MIDDLEWARE --------------------
+// PIPELINE
 app.UseCors("AllowFrontend");
-
 app.UseStaticFiles();
-
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
