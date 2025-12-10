@@ -96,7 +96,7 @@ app.UseSwaggerUI(c =>
 
 // ------------------- PIPELINE --------------------
 app.UseCors(builder => builder
-    .WithOrigins("https://K1Saeid.github.io")
+    .WithOrigins("https://k1saeid.github.io")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials() // مهم
