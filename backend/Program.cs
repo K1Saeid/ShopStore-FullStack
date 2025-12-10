@@ -89,7 +89,7 @@ app.UseCors(builder => builder
     .AllowCredentials() // مهم
 );
 
-
+app.UseCors("AllowFrontend");
 
 app.UseStaticFiles();
 
