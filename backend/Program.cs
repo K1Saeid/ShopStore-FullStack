@@ -4,14 +4,14 @@ using ShopStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ------------------- PORT FOR RAILWAY --------------------
+// ------------------- PORT --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
 {
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 }
 
-// ------------------- DATABASE --------------------
+// ------------------- DB --------------------
 builder.Services.AddDbContext<ShopContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -26,14 +26,6 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 // ------------------- CORS --------------------
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowAngular", policy =>
-//        policy.WithOrigins("http://localhost:4200")
-//              .AllowAnyHeader()
-//              .AllowAnyMethod()
-//              .AllowCredentials());
-//});
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -48,7 +40,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// ------------------- JSON + HTTP CONTEXT --------------------
+// ------------------- JSON --------------------
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
@@ -82,17 +74,9 @@ app.UseSwaggerUI(c =>
 });
 
 // ------------------- PIPELINE --------------------
-app.UseCors(builder => builder
-    .WithOrigins("https://K1Saeid.github.io")
-    .AllowAnyHeader()
-    .AllowAnyMethod()
-    .AllowCredentials() // مهم
-);
-
-app.UseCors("AllowFrontend");
+app.UseCors("AllowFrontend");  // Only this!
 
 app.UseStaticFiles();
-
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
