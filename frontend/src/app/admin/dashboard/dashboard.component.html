@@ -100,7 +100,11 @@
       <tbody>
         <tr *ngFor="let o of latestOrders; let i = index">
           <td>{{ i + 1 }}</td>
-          <td>{{ o.user.fullName }}</td>
+         <td>
+          <a [routerLink]="['/admin/customers', o.user.id]" class="customer-link">
+            {{ o.user.fullName }}
+          </a>
+        </td>
           <td>{{ o.orderNumber }}</td>
           <td>€{{ o.totalPrice }}</td>
 
