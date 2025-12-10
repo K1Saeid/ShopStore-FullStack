@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats.Jpeg;
-using SixLabors.ImageSharp.PixelFormats;
-using ImageMagick;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace ShopStore.Controllers
 {
@@ -10,28 +8,34 @@ namespace ShopStore.Controllers
     [Route("api/[controller]")]
     public class UploadController : ControllerBase
     {
+        private readonly Cloudinary _cloudinary;
+
+        public UploadController(Cloudinary cloudinary)
+        {
+            _cloudinary = cloudinary;
+        }
+
         [HttpPost("image")]
         public async Task<IActionResult> UploadImage(IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("No file uploaded.");
 
-            var uploadPath = Path.Combine("wwwroot", "images");
-            if (!Directory.Exists(uploadPath)) Directory.CreateDirectory(uploadPath);
-
-            var finalName = $"{Guid.NewGuid()}.jpg";
-            var finalPath = Path.Combine(uploadPath, finalName);
-
-            using (var stream = file.OpenReadStream())
-            using (var image = new MagickImage(stream))
+            var uploadParams = new ImageUploadParams
             {
-                image.Format = MagickFormat.Jpeg;   
-                image.Quality = 90;
-                await image.WriteAsync(finalPath);
-            }
+                File = new FileDescription(file.FileName, file.OpenReadStream()),
+                Folder = "shopstore/products",
+                UseFilename = false,
+                UniqueFilename = true,
+                Overwrite = false
+            };
 
-            var url = $"{Request.Scheme}://{Request.Host}/images/{finalName}";
-            return Ok(new { imageUrl = url });
+            var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+            if (uploadResult.Error != null)
+                return BadRequest(uploadResult.Error.Message);
+
+            return Ok(new { imageUrl = uploadResult.SecureUrl.ToString() });
         }
     }
 }
