@@ -105,7 +105,7 @@
 
     <h4>Mijn bestellingen</h4>
 
-    <div *ngFor="let o of pagedOrders" class="order-item clickable" [routerLink]="['/Order', o.id]">
+    <div *ngFor="let o of pagedOrders" class="order-item clickable" [routerLink]="['/order', o.id]">
       <div>
         <strong>Bestelling #{{ o.orderNumber }}</strong><br>
         {{ o.createdAt | date:'medium' }}<br>
