@@ -117,6 +117,12 @@ export class ProfileComponent {
     });
   }
 
+switchTab(tab: string) {
+  this.activeTab = tab;
+
+  // تب انتخابی را در URL ذخیره می‌کنیم
+  window.history.replaceState({}, '', `/account/profile?tab=${tab}`);
+}
 
 
 

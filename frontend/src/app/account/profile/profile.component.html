@@ -5,31 +5,32 @@
   <!-- TABS -->
  <ul class="nav nav-tabs account-tabs">
   <li class="nav-item">
-    <a class="nav-link"
-       [class.active]="activeTab === 'profile'"
-       (click)="activeTab = 'profile'">
-      <i class="bi bi-person-circle me-2"></i>
-      Persoonlijke gegevens
-    </a>
-  </li>
+  <a class="nav-link"
+     [class.active]="activeTab === 'profile'"
+     (click)="switchTab('profile')">
+     <i class="bi bi-person-circle me-2"></i>
+     Persoonlijke gegevens
+  </a>
+</li>
 
-  <li class="nav-item">
-    <a class="nav-link"
-       [class.active]="activeTab === 'address'"
-       (click)="activeTab = 'address'">
-      <i class="bi bi-geo-alt me-2"></i>
-      Mijn adressen
-    </a>
-  </li>
+<li class="nav-item">
+  <a class="nav-link"
+     [class.active]="activeTab === 'address'"
+     (click)="switchTab('address')">
+     <i class="bi bi-geo-alt me-2"></i>
+     Mijn adressen
+  </a>
+</li>
 
-  <li class="nav-item">
-    <a class="nav-link"
-       [class.active]="activeTab === 'orders'"
-       (click)="activeTab = 'orders'">
-      <i class="bi bi-bag-check me-2"></i>
-      Mijn bestellingen
-    </a>
-  </li>
+<li class="nav-item">
+  <a class="nav-link"
+     [class.active]="activeTab === 'orders'"
+     (click)="switchTab('orders')">
+     <i class="bi bi-bag-check me-2"></i>
+     Mijn bestellingen
+  </a>
+</li>
+
 </ul>
 
 
