@@ -53,7 +53,7 @@ export class UserService {
 
 
   syncWithServer() {
-  this.http.get(`${this.authApi}/curre nt-user`, {
+  this.http.get(`${this.authApi}/current-user`, {
     withCredentials: true
   }).subscribe({
     next: (user: any) => {
