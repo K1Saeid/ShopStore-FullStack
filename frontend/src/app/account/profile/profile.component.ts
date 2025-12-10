@@ -6,13 +6,13 @@ import { AddressService } from '../../services/address.service';
 import { OrderService } from '../../services/order.service';
 import { PaginationComponent } from '../../shared/pagination/pagination.component';
 import { RouterLink , ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule, FormsModule,PaginationComponent],
+  imports: [CommonModule, FormsModule,PaginationComponent,RouterLink],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
@@ -43,8 +43,7 @@ export class ProfileComponent {
     public route: ActivatedRoute,
     private userService: UserService,
     private addressService: AddressService,
-    private orderService: OrderService,
-    private router: Router
+    private orderService: OrderService
   ) {}
 
  ngOnInit() {
@@ -102,9 +101,7 @@ export class ProfileComponent {
       });
     }
 
-goToOrder(id: number) {
-  this.router.navigate(['/order', id]);
-}
+
   deleteAddress(id: number) {
     this.addressService.deleteAddress(id).subscribe(() => {
       this.loadAddresses();
