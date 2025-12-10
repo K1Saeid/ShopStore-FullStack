@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CloudinaryDotNet;
+﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ShopStore.Controllers
 {
@@ -24,16 +24,10 @@ namespace ShopStore.Controllers
             var uploadParams = new ImageUploadParams
             {
                 File = new FileDescription(file.FileName, file.OpenReadStream()),
-                Folder = "shopstore/products",
-                UseFilename = false,
-                UniqueFilename = true,
-                Overwrite = false
+                Folder = "shopstore/products"
             };
 
             var uploadResult = await _cloudinary.UploadAsync(uploadParams);
-
-            if (uploadResult.Error != null)
-                return BadRequest(uploadResult.Error.Message);
 
             return Ok(new { imageUrl = uploadResult.SecureUrl.ToString() });
         }

@@ -5,13 +5,18 @@ using ShopStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var cloudinary = new Cloudinary(new Account(
-    builder.Configuration["Cloudinary:CloudName"],
-    builder.Configuration["Cloudinary:ApiKey"],
-    builder.Configuration["Cloudinary:ApiSecret"]
-));
+var cloudName = Environment.GetEnvironmentVariable("CLOUDINARY_CLOUD_NAME");
+var apiKey = Environment.GetEnvironmentVariable("CLOUDINARY_API_KEY");
+var apiSecret = Environment.GetEnvironmentVariable("CLOUDINARY_API_SECRET");
 
-builder.Services.AddSingleton(cloudinary);
+builder.Services.AddSingleton(new Cloudinary(new Account(
+    cloudName,
+    apiKey,
+    apiSecret
+)));
+
+
+
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
