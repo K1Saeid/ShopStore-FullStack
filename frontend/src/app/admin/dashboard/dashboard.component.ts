@@ -4,10 +4,10 @@ import Chart from 'chart.js/auto';
 import { OrderService } from '../../services/order.service';
 import { ProductService } from '../../services/product.service';
 import { UserService } from '../../services/auth.service';
-import { NgFor , DatePipe , NgIf} from '@angular/common';
+
+import { NgFor, DatePipe, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
-
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -17,7 +17,6 @@ import { RouterLink } from "@angular/router";
 })
 export class DashboardComponent implements AfterViewInit {
 
- 
   stats = {
     totalRevenue: 0,
     last7DaysRevenue: 0,
@@ -27,32 +26,28 @@ export class DashboardComponent implements AfterViewInit {
   };
 
   todayStats = {
-  revenueToday: 0,
-  orderCount: 0,
-  newCustomersToday: 0,
-  avgOrderValue: 0
+    revenueToday: 0,
+    orderCount: 0,
+    newCustomersToday: 0,
+    avgOrderValue: 0
   };
-  
-  //status stats
+
   orderStatusStats = {
-  paid: 0,
-  pending: 0,
-  cancelled: 0
+    paid: 0,
+    pending: 0,
+    cancelled: 0
   };
-  orderStatusChart: any;
 
   latestOrders: any[] = [];
   lowStock: any[] = [];
   topSelling: any[] = [];
 
-  //chart
-  chart: any;
-  salesLabels: any[] = [];
-  salesValues: number[] = [];
   selectedRange = 'weekly';
+  salesLabels: string[] = [];
+  salesValues: number[] = [];
 
-
-  
+  chart!: Chart;
+  orderStatusChart!: Chart;
 
   constructor(
     private orderService: OrderService,
@@ -65,73 +60,82 @@ export class DashboardComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-     this.loadSales();
-  //  setTimeout(() => this.renderSalesChart(), 500);
+    this.loadSales();
   }
-loadSales() {
-  this.orderService.getSales(this.selectedRange).subscribe((res: any[]) => {
 
-    this.salesLabels = res.map(r => r.label);
-    this.salesValues = res.map(r => r.total);
-    this.loadChart();
+  // =========================
+  //       SALES CHART
+  // =========================
+  loadSales() {
+    this.orderService.getSales(this.selectedRange).subscribe((res: any[]) => {
 
-    // بارگذاری وضعیت سفارش‌ها
-    this.orderService.getOrderStatusStats().subscribe((stats: any) => {
-      this.orderStatusStats = stats;
+      this.salesLabels = res.map(r => r.label);
+      this.salesValues = res.map(r => r.total);
+
+      this.renderSalesChart();
       this.loadOrderStatusChart();
     });
+  }
 
-  });
-}
+  renderSalesChart() {
+    const ctx = document.getElementById('salesChart') as HTMLCanvasElement;
+    if (!ctx) return;
 
-loadChart() {
-  const ctx = document.getElementById('salesChart') as HTMLCanvasElement;
-  if (!ctx) return;
+    if (this.chart) this.chart.destroy();
 
-  if (this.chart) this.chart.destroy();
+    this.chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: this.salesLabels,
+        datasets: [{
+          label: 'Revenue (€)',
+          data: this.salesValues,
+          borderColor: "#007bff",
+          borderWidth: 3,
+          tension: 0.3,
+          fill: false
+        }]
+      }
+    });
+  }
 
-  this.chart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: this.salesLabels,
-      datasets: [{
-        label: 'Revenue (€)',
-        data: this.salesValues,
-        borderColor: "#007bff",
-        borderWidth: 3,
-        tension: 0.3,
-        fill: false
-      }]
-    }
-  });
-}
+  // =========================
+  //   ORDER STATUS CHART
+  // =========================
+  loadOrderStatusChart() {
+    this.orderService.getOrderStatusStats().subscribe((stats: any) => {
+      this.orderStatusStats = stats;
 
-loadOrderStatusChart() {
-  const ctx = document.getElementById('orderStatusChart') as HTMLCanvasElement;
-  if (!ctx) return;
+      const ctx = document.getElementById('orderStatusChart') as HTMLCanvasElement;
+      if (!ctx) return;
 
-  if (this.orderStatusChart) this.orderStatusChart.destroy();
+      if (this.orderStatusChart) this.orderStatusChart.destroy();
 
-  this.orderStatusChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Paid', 'Pending', 'Cancelled'],
-      datasets: [{
-        data: [
-          this.orderStatusStats.paid,
-          this.orderStatusStats.pending,
-          this.orderStatusStats.cancelled
-        ],
-        backgroundColor: ['#28a745', '#ffc107', '#dc3545'],
-        hoverOffset: 10
-      }]
-    }
-  });
-}
+      this.orderStatusChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Paid', 'Pending', 'Cancelled'],
+          datasets: [{
+            data: [
+              stats.paid,
+              stats.pending,
+              stats.cancelled
+            ],
+            backgroundColor: ['#28a745', '#ffc107', '#dc3545'],
+            hoverOffset: 10
+          }]
+        }
+      });
+    });
+  }
 
-
+  // =========================
+  //        DASHBOARD
+  // =========================
   loadDashboard() {
+    // -------- Orders ---------
     this.orderService.getAllOrder().subscribe(orders => {
+
       this.stats.totalOrders = orders.length;
       this.stats.totalRevenue = orders.reduce((t, o) => t + o.totalPrice, 0);
 
@@ -141,28 +145,31 @@ loadOrderStatusChart() {
 
       this.stats.last7DaysRevenue = last7Days.reduce((t, o) => t + o.totalPrice, 0);
 
-      this.latestOrders = orders.slice(0, 5);
+      this.latestOrders = orders
+        .sort((a: any, b: any) => b.createdAt.localeCompare(a.createdAt))
+        .slice(0, 5);
     });
 
+    // -------- Customers ---------
     this.userService.getAllUsers().subscribe(users => {
       this.stats.totalCustomers = users.length;
     });
 
+    // -------- Products ---------
     this.productService.getAllProducts().subscribe(products => {
       this.stats.totalProducts = products.length;
+
       this.lowStock = products.filter(p => p.stock < 5);
-      this.topSelling = products.sort((a,b) => b.sold - a.sold).slice(0, 5);
+
+      this.topSelling = [...products]
+        .sort((a, b) => b.sold - a.sold)
+        .slice(0, 5);
     });
 
-    // today stats
-      this.orderService.getTodayStats().subscribe((res: any) => {
+    // -------- Today Stats ---------
+    this.orderService.getTodayStats().subscribe((res: any) => {
       this.todayStats = res;
     });
-
-  
-
   }
-
-  
-
 }
+
