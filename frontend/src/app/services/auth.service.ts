@@ -16,7 +16,7 @@ export class UserService {
   currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) {
-    this.syncWithServer();  // بعد از refresh از Session واقعی backend می‌گیرد
+    this.syncWithServer(); 
   }
 
   // ============================================
@@ -51,19 +51,22 @@ export class UserService {
   // CURRENT USER SYNC
   // ============================================
 
-  /** هنگام لود Angular از backend user واقعی را می‌گیرد */
+
   syncWithServer() {
-    this.http.get(`${this.authApi}/current-user`, {
-      withCredentials: true
-    }).subscribe({
-      next: (user: any) => {
-        this.setCurrentUser(user);
-      },
-      error: () => {
-        this.logout();
-      }
-    });
-  }
+  this.http.get(`${this.authApi}/curre nt-user`, {
+    withCredentials: true
+  }).subscribe({
+    next: (user: any) => {
+      this.setCurrentUser(user);
+    },
+    error: () => {
+    
+      console.warn("User not logged in or session not ready");
+      
+    }
+  });
+}
+
 
   setCurrentUser(user: any) {
     if (this.isBrowser()) {

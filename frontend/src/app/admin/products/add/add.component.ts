@@ -58,14 +58,12 @@ export class AddProductComponent {
   // slug
   this.product.slug = this.product.name.toLowerCase().replace(/ /g, '-');
 
-  // ❗ دسته انتخاب نشده؟
   if (!this.product.categoryId) {
     this.errorMessage = "Please select a category!";
     this.loading = false;
     return;
   }
 
-  // ❗ فایل انتخاب شده
   if (this.selectedFile) {
     this.productService.uploadImage(this.selectedFile).subscribe({
       next: (res) => {
@@ -78,7 +76,6 @@ export class AddProductComponent {
       }
     });
   } else {
-    // بدون آپلود مستقیم ذخیره کن
     this.saveProduct();
   }
 }

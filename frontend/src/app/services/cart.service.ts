@@ -21,8 +21,8 @@ export class CartService {
     this.http.post<any>(`${environment.apiBaseUrl}/Cart/add`, item)
       .subscribe({
         next: (res) => {
-          this.cartCount.next(res.cartItemsCount);  // 🔥 الان مقدار درست میاد
-          callback?.(true);
+          this.cartCount.next(res.cartItemsCount); 
+                    callback?.(true);
         },
         error: () => callback?.(false)
       });
