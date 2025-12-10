@@ -5,13 +5,7 @@ using ShopStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var cloudinary = new Cloudinary(new Account(
-    builder.Configuration["Cloudinary:CloudName"],
-    builder.Configuration["Cloudinary:ApiKey"],
-    builder.Configuration["Cloudinary:ApiSecret"]
-));
 
-builder.Services.AddSingleton(cloudinary);
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
@@ -73,7 +67,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.None;
-    options.Cookie.SameSite = SameSiteMode.None; // مهم
+    options.Cookie.SameSite = SameSiteMode.None; 
 });
 
 builder.Services.AddEndpointsApiExplorer();
