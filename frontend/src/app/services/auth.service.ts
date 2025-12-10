@@ -75,11 +75,22 @@ export class UserService {
     }
   }
 
-  getCurrentUser(): any {
+    getCurrentUser(): any {
+    // اول از BehaviorSubject
+    const subjectUser = this.currentUserSubject.value;
+    if (subjectUser) return subjectUser;
+
+    // بعد از localStorage
     if (!this.isBrowser()) return null;
     const data = localStorage.getItem('user');
-    return data ? JSON.parse(data) : null;
+    if (!data) return null;
+
+    const user = JSON.parse(data);
+    // دوباره داخل BehaviorSubject هم ست کنیم
+    this.currentUserSubject.next(user);
+    return user;
   }
+
 
   private isBrowser(): boolean {
     return typeof window !== 'undefined';
