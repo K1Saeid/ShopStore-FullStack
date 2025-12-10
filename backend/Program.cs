@@ -1,34 +1,8 @@
-﻿using CloudinaryDotNet;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShopStore.Models;
 using ShopStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// ------------------- CLOUDINARY CONFIGURATION --------------------
-var config = builder.Configuration;
-
-var cloudName =
-    Environment.GetEnvironmentVariable("CLOUDINARY_CLOUD_NAME")
-    ?? config["Cloudinary:CloudName"];
-
-var apiKey =
-    Environment.GetEnvironmentVariable("CLOUDINARY_API_KEY")
-    ?? config["Cloudinary:ApiKey"];
-
-var apiSecret =
-    Environment.GetEnvironmentVariable("CLOUDINARY_API_SECRET")
-    ?? config["Cloudinary:ApiSecret"];
-
-Console.WriteLine("CloudName = " + cloudName);
-Console.WriteLine("ApiKey = " + apiKey);
-
-builder.Services.AddSingleton(new Cloudinary(new Account(
-    cloudName,
-    apiKey,
-    apiSecret
-)));
-
 
 // ------------------- PORT FOR RAILWAY --------------------
 var port = Environment.GetEnvironmentVariable("PORT");
@@ -52,6 +26,14 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 // ------------------- CORS --------------------
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowAngular", policy =>
+//        policy.WithOrigins("http://localhost:4200")
+//              .AllowAnyHeader()
+//              .AllowAnyMethod()
+//              .AllowCredentials());
+//});
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -59,20 +41,39 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
             "https://k1saeid.github.io",
             "https://k1saeid.github.io/ShopStore-FullStack"
-        ).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
 
-builder.Services.AddControllers();
+// ------------------- JSON + HTTP CONTEXT --------------------
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.ReferenceHandler =
+            System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
+
+// ------------------- SESSION --------------------
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+    options.Cookie.SameSite = SameSiteMode.None; // مهم
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// SWAGGER
+// ------------------- SWAGGER --------------------
 app.MapOpenApi();
 app.UseSwaggerUI(c =>
 {
@@ -80,9 +81,18 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-// PIPELINE
-app.UseCors("AllowFrontend");
+// ------------------- PIPELINE --------------------
+app.UseCors(builder => builder
+    .WithOrigins("https://K1Saeid.github.io")
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials() // مهم
+);
+
+
+
 app.UseStaticFiles();
+
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();

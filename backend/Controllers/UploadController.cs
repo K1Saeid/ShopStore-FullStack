@@ -10,9 +10,20 @@ namespace ShopStore.Controllers
     {
         private readonly Cloudinary _cloudinary;
 
-        public UploadController(Cloudinary cloudinary)
+        public UploadController(IConfiguration config)
         {
-            _cloudinary = cloudinary;
+            var cloudName = config["Cloudinary:CloudName"];
+            var apiKey = config["Cloudinary:ApiKey"];
+            var apiSecret = config["Cloudinary:ApiSecret"];
+
+            if (string.IsNullOrEmpty(cloudName) ||
+                string.IsNullOrEmpty(apiKey) ||
+                string.IsNullOrEmpty(apiSecret))
+            {
+                throw new Exception("Cloudinary configuration is missing.");
+            }
+
+            _cloudinary = new Cloudinary(new Account(cloudName, apiKey, apiSecret));
         }
 
         [HttpPost("image")]
