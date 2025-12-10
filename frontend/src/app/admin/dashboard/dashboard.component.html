@@ -109,10 +109,8 @@
           <td>{{ i + 1 }}</td>
 
           <td>
-            <!-- ⬅⬅⬅ لینک درست شده -->
-            <a [routerLink]="['/admin/customers', o.customerId]"
-               class="customer-link">
-              {{ o.fullName }}
+            <a [routerLink]="['/admin/customers', o.user.id]" class="customer-link">
+              {{ o.user.fullName }}
             </a>
           </td>
 
